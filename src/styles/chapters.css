@@ -257,10 +257,10 @@
   .ps-icons img { width: 54px; }
   .ps-gift { bottom: 7%; right: 6%; font-size: 0.9rem; }
   .ps-art--boards { gap: 18px 10px; }
-  .ed-body { grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr) 160px; }
+  .ed-body { grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr) 132px; }
   .ed-tree { display: none; }
   .ed-main { grid-template-columns: 30px minmax(0, 1fr); padding: 10px 0; }
-  .ed-code, .ed-gutter { font-size: 0.62rem; }
+  .ed-code, .ed-gutter { font-size: 0.62rem; line-height: 1.5; } /* all 21 lines fit above the preview row */
   .ed-side { border-left: 0; border-top: 1px solid #1c1f26; display: grid; grid-template-columns: 1fr 1fr; }
   .ed-side-h { display: none; }
   .ed-term { border-top: 0; border-left: 1px solid #1c1f26; min-height: 0; font-size: 0.58rem; }
@@ -272,5 +272,8 @@
   .fg-impact { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
   .fg-impact > div { padding: 8px; }
   .fg-impact span { font-size: 0.56rem; }
+  .fg-comp .c-input { display: none; } /* the screen frame already shows the search field */
+  .s-img { min-height: 24px; }
+  .s-card strong { font-size: 0.86rem; }
   .fg-people b, .fg-ship, .c-tabs, .c-step, .c-prog, .c-seats, .c-ticket, .c-tag, .c-check { display: none; }
 }

@@ -73,7 +73,8 @@ em { font-style: italic; }
 .hdr-name { display: flex; align-items: center; }
 .logo { display: block; height: 34px; width: auto; } /* AM monogram (logo B) */
 .hdr-name { justify-self: start; }
-.hdr-menu { display: flex; justify-self: end; align-items: center; gap: 12px; font-family: var(--mono); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--bone); padding: 10px 0 10px 10px; }
+.hdr-right { justify-self: end; display: flex; align-items: center; gap: 24px; }
+.hdr-menu { display: flex; align-items: center; gap: 12px; font-family: var(--mono); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--bone); padding: 10px 0 10px 10px; }
 .hdr-menu i { position: relative; width: 22px; height: 10px; }
 .hdr-menu i b { position: absolute; left: 0; right: 0; height: 1.5px; background: currentColor; transition: transform 0.45s var(--ease), top 0.45s var(--ease); }
 .hdr-menu i b:first-child { top: 0; }
@@ -115,6 +116,7 @@ html:not(.has-cursor) .cursor { display: none; }
 @media (max-width: 900px) {
   :root { --pad: 5vw; }
   .hdr { padding: 1rem 5vw; }
+  .hdr-cta { display: none; } /* phones: the CTA lives in the hero */
   .hdr-name { font-size: 1.45rem; }
   .mm { padding: 110px 5vw 32px; }
   .mm-link { font-size: clamp(2.4rem, 11vw, 3.4rem); }

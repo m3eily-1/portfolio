@@ -1,8 +1,8 @@
 1:"$Sreact.fragment"
-2:I[2971,["/portfolio/_next/static/chunks/178fiixt91asf.js","/portfolio/_next/static/chunks/0sp_1kdwxneoy.js","/portfolio/_next/static/chunks/158myu8e_yme3.js","/portfolio/_next/static/chunks/3edmjfjmyps6z.js"],"default"]
-3:I[50367,["/portfolio/_next/static/chunks/178fiixt91asf.js","/portfolio/_next/static/chunks/0sp_1kdwxneoy.js","/portfolio/_next/static/chunks/158myu8e_yme3.js","/portfolio/_next/static/chunks/3edmjfjmyps6z.js"],"default"]
+2:I[2971,["/portfolio/_next/static/chunks/178fiixt91asf.js","/portfolio/_next/static/chunks/0sp_1kdwxneoy.js","/portfolio/_next/static/chunks/158myu8e_yme3.js","/portfolio/_next/static/chunks/1gsb64ukqdrzd.js"],"default"]
+3:I[50367,["/portfolio/_next/static/chunks/178fiixt91asf.js","/portfolio/_next/static/chunks/0sp_1kdwxneoy.js","/portfolio/_next/static/chunks/158myu8e_yme3.js","/portfolio/_next/static/chunks/1gsb64ukqdrzd.js"],"default"]
 4:I[97367,["/portfolio/_next/static/chunks/178fiixt91asf.js","/portfolio/_next/static/chunks/0sp_1kdwxneoy.js","/portfolio/_next/static/chunks/158myu8e_yme3.js"],"OutletBoundary"]
 5:"$Sreact.suspense"
 :HL["/portfolio/_next/static/chunks/09pt2e9--3bl0.css","style"]
-0:{"rsc":["$","$1","c",{"children":[[["$","$L2",null,{}],["$","$L3",null,{"slug":"stc-design-system"}]],[["$","link","0",{"rel":"stylesheet","href":"/portfolio/_next/static/chunks/09pt2e9--3bl0.css","precedence":"next"}],["$","script","script-0",{"src":"/portfolio/_next/static/chunks/3edmjfjmyps6z.js","async":true}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"x3S5PUHC0yKjpnPPTjV1A"}
+0:{"rsc":["$","$1","c",{"children":[[["$","$L2",null,{}],["$","$L3",null,{"slug":"stc-design-system"}]],[["$","link","0",{"rel":"stylesheet","href":"/portfolio/_next/static/chunks/09pt2e9--3bl0.css","precedence":"next"}],["$","script","script-0",{"src":"/portfolio/_next/static/chunks/1gsb64ukqdrzd.js","async":true}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"93oym6KsHXovvtRff2f8e"}
 6:null

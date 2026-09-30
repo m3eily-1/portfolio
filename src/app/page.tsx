@@ -10,6 +10,9 @@ import Services from "@/components/Services";
 import Clients from "@/components/Clients";
 import AiSection from "@/components/AiSection";
 import Delight from "@/components/Delight";
+
+// Delight section hidden for now (Ahmed, 2026-09-30); flip to true to bring it back.
+const SHOW_DELIGHT = false;
 import HowIWork from "@/components/HowIWork";
 import Voices from "@/components/Voices";
 import Beyond from "@/components/Beyond";
@@ -33,7 +36,7 @@ export default function Home() {
         <CareerCounter />
         <FeaturedWorks limit={4} />
         <AiSection />
-        <Delight />
+        {SHOW_DELIGHT && <Delight />}
         <Clients />
         <Services />
         <HowIWork />

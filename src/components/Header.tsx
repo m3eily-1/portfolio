@@ -12,7 +12,7 @@ import Arrow from "@/components/Arrow";
 const MENU = [
   { id: "story", label: "Story" },
   { id: "work", label: "Work" },
-  { id: "delight", label: "Delight" },
+  // { id: "delight", label: "Delight" }, // section hidden for now
   { id: "services", label: "Services" },
   { id: "process", label: "Process" },
   { id: "contact", label: "Contact" },
@@ -83,6 +83,13 @@ export default function Header() {
       <button className="hdr-name" onClick={() => (path === "/" ? getLenis()?.scrollTo(0, { duration: 1.6 }) : navigate(router, "/"))}>
         <img className="logo" src="/logo/logo-am.svg?v=3" alt={person.name} />
       </button>
+      <div className="hdr-right">
+      <a className="btn btn--line hdr-cta" href={`mailto:${person.email}`}>
+        <span className="btn-ico">
+          <Arrow />
+        </span>
+        Let&rsquo;s talk
+      </a>
       <button className="hdr-menu" onClick={() => setOpen((v) => !v)} aria-expanded={open} aria-controls="site-menu">
         <span>{open ? "Close" : "Menu"}</span>
         <i aria-hidden className={open ? "is-x" : ""}>
@@ -90,6 +97,7 @@ export default function Header() {
           <b />
         </i>
       </button>
+      </div>
     </header>
 
     <div ref={menu} id="site-menu" className="mm" aria-hidden={!open}>

@@ -30,6 +30,6 @@
   .yc-left { padding-bottom: 0; }
   .yc-year { font-size: 26vw; }
   .yc-roles { padding-top: 4svh; padding-bottom: 60svh; }
-  .yc-right { -webkit-mask-image: linear-gradient(#000 70%, transparent); mask-image: linear-gradient(#000 70%, transparent); }
+  .yc-right { -webkit-mask-image: linear-gradient(transparent, #000 9%, #000 70%, transparent); mask-image: linear-gradient(transparent, #000 9%, #000 70%, transparent); } /* soft top edge: roles slide under the year instead of being sliced */
   .yc-role h3 { font-size: 2rem; }
 }

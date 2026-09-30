@@ -27,18 +27,19 @@
 /* Text placed exactly like the reference hero, which uses fixed px at every desktop size:
    a 580px column centred on the page, label at y476, headline (64px, two lines) at y502;
    (the reference's quote + signature block was removed at Ahmed's request). */
-.hero-copy { position: absolute; z-index: 4; left: calc(50% - 290px); top: 516px; width: 580px; display: flex; flex-direction: column; align-items: center; text-align: center; }
+/* top: the reference 516px, but on short windows lifted so the scroll indicator stays above the fold; copy is ~255px tall without the CTA */
+.hero-copy { position: absolute; z-index: 4; left: calc(50% - 290px); top: max(380px, min(546px, calc(100svh - 270px))); width: 580px; display: flex; flex-direction: column; align-items: center; text-align: center; }
 .hero-copy .hero-line { text-align: center !important; }
 .hero-title { white-space: nowrap; } /* SplitText writes an inline text-align */
-.hero-hi { margin-bottom: 9px; }
+.hero-hi { margin-bottom: 2px; }
 /* Scroll indicator: a label over a thin track with a gold dash running down it. */
-.hero-cta { margin-top: 28px; }
-.hero-scroll { margin-top: 36px; display: flex; flex-direction: column; align-items: center; gap: 10px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--grey); transition: color 0.3s; }
+.hero-cta { margin-top: 28px; display: none; } /* desktop: the CTA sits in the header */
+.hero-scroll { margin-top: 28px; display: flex; flex-direction: column; align-items: center; gap: 10px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--grey); transition: color 0.3s; }
 .hero-scroll:hover { color: var(--bone); }
 .hero-scroll i { position: relative; width: 1px; height: 44px; overflow: hidden; background: var(--line); }
 .hero-scroll i::after { content: ""; position: absolute; left: 0; top: 0; width: 1px; height: 16px; background: var(--sun); animation: hero-scroll 1.8s var(--ease) infinite; }
 @keyframes hero-scroll { from { transform: translateY(-16px); } to { transform: translateY(44px); } }
-.hero-sub { margin-top: 16px; max-width: 360px; font-size: 18px; line-height: 1.15; letter-spacing: -0.03em; color: var(--grey); }
+.hero-sub { margin-top: 8px; max-width: 360px; font-size: 18px; line-height: 1.15; letter-spacing: -0.03em; color: var(--grey); }
 .hero-hi { font-family: var(--mono); font-weight: 500; font-size: 12px; line-height: 1.4; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); }
 .hero-title { font-family: var(--serif); font-weight: 400; font-size: 64px; line-height: 1; letter-spacing: -0.04em; color: #fff; }
 .hero-title .px { font-size: 0.8em; }
@@ -121,6 +122,7 @@
   .hero { --ph: 50svh; height: 100svh; min-height: 620px; }
   .hero-portrait { left: calc(50% - var(--ph) * var(--phx)); top: 17svh; -webkit-mask-image: linear-gradient(to bottom, #000 50%, transparent 92%); mask-image: linear-gradient(to bottom, #000 50%, transparent 92%); }
   .hero-copy { left: var(--pad); right: var(--pad); top: auto; bottom: 20px; width: auto; }
+  .hero-cta { display: inline-flex; }
   .hero-scroll { margin-top: 20px; gap: 8px; }
   .hero-scroll i { height: 32px; }
   .hero-title { font-size: 9.6vw; padding-inline: 6vw; } /* one line (~7.7em wide) with side breathing room: ~74vw of text in a 90vw column */
