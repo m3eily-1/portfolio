@@ -22,11 +22,6 @@ export default function Contact() {
         if (prefersReducedMotion()) return;
         const t = new SplitText(".ct-title", { type: "lines,chars", mask: "lines", linesClass: "sl" });
         gsap.from(t.chars, { yPercent: 150, rotate: 8, stagger: 0.02, duration: 1.4, scrollTrigger: { trigger: ".ct-title", start: "top 80%" } });
-        gsap.fromTo(
-          ".ct-sign",
-          { clipPath: "inset(-50% 100% -50% -20%)" },
-          { clipPath: "inset(-50% -20% -50% -20%)", duration: 2, ease: "power2.inOut", clearProps: "clipPath", scrollTrigger: { trigger: ".ct-title", start: "top 55%" } },
-        );
       }, el);
     });
     // Magnetic CTA
@@ -70,7 +65,6 @@ export default function Contact() {
         <br />
         experiences <em>together.</em>
       </h2>
-      <p className="ct-sign">{person.name}</p>
       <div className="ct-actions">
         <a ref={btn} className="ct-big" href={`mailto:${person.email}`} data-cursor="Write">
           <span>Start a conversation</span>

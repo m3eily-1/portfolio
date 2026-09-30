@@ -76,6 +76,23 @@ em { font-style: italic; }
 .hdr-name { justify-self: start; }
 .hdr-cta { justify-self: end; }
 .hdr-nav button { width: fit-content; color: #fff; transition: color 0.3s; }
+.hdr-menu { display: none; justify-self: end; align-items: center; gap: 12px; font-family: var(--mono); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--bone); padding: 10px 0 10px 10px; }
+.hdr-menu i { position: relative; width: 22px; height: 10px; }
+.hdr-menu i b { position: absolute; left: 0; right: 0; height: 1.5px; background: currentColor; transition: transform 0.45s var(--ease), top 0.45s var(--ease); }
+.hdr-menu i b:first-child { top: 0; }
+.hdr-menu i b:last-child { top: 8.5px; }
+.hdr-menu i.is-x b:first-child { top: 4.25px; transform: rotate(45deg); }
+.hdr-menu i.is-x b:last-child { top: 4.25px; transform: rotate(-45deg); }
+.hdr.is-menu { transform: none !important; background: transparent; backdrop-filter: none; -webkit-backdrop-filter: none; }
+/* Mobile menu panel (phones only) */
+.mm { position: fixed; inset: 0; z-index: 45; background: var(--ink); display: none; flex-direction: column; justify-content: space-between; padding: 110px 5vw 32px; visibility: hidden; opacity: 0; }
+.mm-nav { display: flex; flex-direction: column; }
+.mm-link { display: flex; align-items: baseline; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--line); font-family: var(--serif); font-size: clamp(2.4rem, 11vw, 3.4rem); line-height: 1; letter-spacing: -0.04em; color: var(--bone); text-align: left; }
+.mm-link b { font-family: var(--mono); font-weight: 400; font-size: 12px; letter-spacing: 0.1em; color: var(--sun); transform: translateY(-0.9em); }
+.mm-foot { display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
+.mm-foot p { font-size: 16px; color: var(--mute); }
+.mm-social { display: flex; gap: 18px; }
+.mm-social a { color: var(--bone); }
 .hdr-nav button:hover { color: var(--gold); }
 
 /* Cursor: literally round, so it keeps its radius. */
@@ -100,6 +117,9 @@ html:not(.has-cursor) .cursor { display: none; }
 @media (max-width: 900px) {
   :root { --pad: 5vw; }
   .hdr { grid-template-columns: 1fr auto; padding: 1rem 5vw; }
+  .hdr-cta { display: none; }
+  .hdr-menu { display: flex; }
+  .mm { display: flex; }
   .hdr-nav { display: none; }
   .hdr-name { font-size: 1.45rem; }
 }

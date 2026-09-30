@@ -26,6 +26,10 @@
 .yc-role ul { margin-top: 12px; display: flex; flex-direction: column; gap: 6px; font-size: 16px; line-height: 1.4; color: rgba(18, 17, 13, 0.72); }
 
 @media (max-width: 900px) {
-  .yc-stage { grid-template-columns: 1fr; grid-template-rows: auto minmax(0, 1fr); padding-top: 80px; }
-  .yc-year { font-size: 30vw; }
+  .yc-stage { grid-template-columns: 1fr; grid-template-rows: auto minmax(0, 1fr); gap: 12px; padding-top: 80px; }
+  .yc-left { padding-bottom: 0; }
+  .yc-year { font-size: 26vw; }
+  .yc-roles { padding-top: 4svh; padding-bottom: 60svh; }
+  .yc-right { -webkit-mask-image: linear-gradient(#000 70%, transparent); mask-image: linear-gradient(#000 70%, transparent); }
+  .yc-role h3 { font-size: 2rem; }
 }

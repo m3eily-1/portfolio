@@ -92,7 +92,6 @@
 .ct .label { color: rgba(18, 16, 14, 0.6); }
 .ct .label span { color: var(--ink); }
 .ct-title { font-family: var(--serif); font-weight: 400; font-size: clamp(3.4rem, 10.4vw, 12rem); line-height: 0.9; letter-spacing: -0.03em; margin-top: 3rem; }
-.ct-sign { font-family: var(--script); font-size: clamp(3rem, 6vw, 6rem); line-height: 1; transform: rotate(-5deg); width: fit-content; margin: 0.1em 8vw 0 auto; }
 .ct-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; margin-top: 8svh; }
 .ct-big { display: inline-flex; align-items: center; gap: 1.4rem; background: var(--ink); color: var(--sun); padding: 1.5rem 2.2rem; font-family: var(--serif); font-weight: 400; font-size: clamp(1.4rem, 2.2vw, 2.2rem); line-height: 1; }
 .ct-big svg { width: 20px; height: 20px; transition: transform 0.5s var(--ease); }
@@ -114,8 +113,7 @@
   .vo-card { width: 80vw; min-height: 50svh; }
   .by-item, .by-item.is-flip { grid-template-columns: 1fr; }
   .by-item.is-flip .by-img { order: 0; }
-  .ct-sign { margin-right: 2vw; }
-  .ft { flex-direction: column; align-items: flex-start; }
+    .ft { flex-direction: column; align-items: flex-start; }
 }
 
 /* Times display sizes use the reference's tight tracking. */

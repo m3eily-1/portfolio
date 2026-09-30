@@ -13,9 +13,9 @@ export const person = {
   // Hero portrait (a transparent cut-out, bottom-aligned). Empty = no portrait.
   portrait: "/img/portrait-hero.webp?v=2",
   quote: "Design is a silent storyteller, weaving narratives through the seamless integration of form and function.",
-  // TODO(Ahmed): add Dribbble here once you share the profile URL.
   links: [
     { label: "LinkedIn", href: "https://www.linkedin.com/in/m3eily" },
+    { label: "Dribbble", href: "https://dribbble.com/m3eily" },
     { label: "Behance", href: "https://www.behance.net/m3eily" },
   ],
 };
