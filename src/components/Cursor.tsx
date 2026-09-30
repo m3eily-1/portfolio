@@ -17,9 +17,9 @@ export default function Cursor() {
       yTo(e.clientY);
       document.documentElement.style.setProperty("--mx", `${e.clientX}px`);
       document.documentElement.style.setProperty("--my", `${e.clientY}px`);
-      const t = e.target as HTMLElement;
-      el.classList.toggle("is-hover", !!t.closest("a,button,[data-cursor]"));
-      const label = t.closest<HTMLElement>("[data-cursor]")?.dataset.cursor ?? "";
+      const t = e.target instanceof Element ? e.target : null;
+      el.classList.toggle("is-hover", !!t?.closest("a,button,[data-cursor]"));
+      const label = t?.closest<HTMLElement>("[data-cursor]")?.dataset.cursor ?? "";
       el.dataset.label = label;
     };
     window.addEventListener("pointermove", move);

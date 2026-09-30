@@ -7,6 +7,7 @@ import { person } from "@/data/site";
 import { projects } from "@/data/work";
 import type { RingCard, RingScene } from "@/lib/ringScene";
 import { navigate } from "@/components/Transition";
+import HeroBg from "@/components/HeroBg";
 
 // Every mockup in the PDF, each linked to its case study.
 const CARDS: RingCard[] = projects.flatMap((p) => p.images.map((src) => ({ src, slug: p.slug, label: `${p.name} — ${p.category}` })));
@@ -94,6 +95,7 @@ export default function Hero() {
 
   return (
     <section ref={root} className="hero" id="top">
+      <HeroBg />
       <canvas ref={canvas} className="hero-canvas" aria-label="Rotating ring of project mockups" />
       <div className="hero-fade" aria-hidden />
 
