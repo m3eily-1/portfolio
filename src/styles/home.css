@@ -28,7 +28,8 @@
    a 580px column centred on the page, label at y476, headline (64px, two lines) at y502;
    (the reference's quote + signature block was removed at Ahmed's request). */
 .hero-copy { position: absolute; z-index: 4; left: calc(50% - 290px); top: 476px; width: 580px; display: flex; flex-direction: column; align-items: center; text-align: center; }
-.hero-copy .hero-line { text-align: center !important; } /* SplitText writes an inline text-align */
+.hero-copy .hero-line { text-align: center !important; }
+.hero-title { white-space: nowrap; } /* SplitText writes an inline text-align */
 .hero-hi { margin-bottom: 9px; }
 .hero-sub { margin-top: 16px; max-width: 360px; font-size: 18px; line-height: 1.15; letter-spacing: -0.03em; color: var(--grey); }
 .hero-hi { font-family: var(--mono); font-weight: 500; font-size: 12px; line-height: 1.4; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); }
@@ -109,7 +110,7 @@
   .hero { --ph: 50svh; height: 100svh; min-height: 620px; }
   .hero-portrait { left: calc(50% - var(--ph) * var(--phx)); top: 17svh; -webkit-mask-image: linear-gradient(to bottom, #000 50%, transparent 92%); mask-image: linear-gradient(to bottom, #000 50%, transparent 92%); }
   .hero-copy { left: var(--pad); right: var(--pad); top: auto; bottom: 5svh; width: auto; }
-  .hero-title { font-size: 13vw; }
+  .hero-title { font-size: 13vw; white-space: normal; }
   .st-title { font-size: 15vw; }
   .vo-card { width: 80vw; min-height: 50svh; }
   .by-item, .by-item.is-flip { grid-template-columns: 1fr; }
