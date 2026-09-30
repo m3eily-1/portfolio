@@ -11,6 +11,10 @@ const SERVICES = [
     items: ["iOS and Android app design", "Responsive web apps and dashboards", "User flows and wireframes", "UI directions and visual design", "Prototypes for testing"],
   },
   {
+    name: "AI Product Design",
+    items: ["AI features and assistant experiences", "Conversation and prompt design", "Working prototypes built with AI coding agents", "Fast concepting with generative image and video tools"],
+  },
+  {
     name: "Design Systems",
     items: ["Typography, colour and UI components", "Reusable libraries in Figma", "Style guides and interaction patterns", "Workshops and support for dev teams"],
   },

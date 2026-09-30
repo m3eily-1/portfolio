@@ -101,7 +101,10 @@ export const releases: Release[] = [
     role: "Product Design Lead",
     place: "Riyadh · On-site",
     // TODO(Ahmed): replace with your own line about the webook work.
-    notes: [{ tag: "Shipped", text: "Ticketing and live-event experiences, from discovery to the gate." }],
+    notes: [
+      { tag: "Shipped", text: "Ticketing and live-event experiences, from discovery to the gate." },
+      { tag: "Added", text: "AI-built prototypes and 3D concept experiences for events and sports." },
+    ],
     current: true,
   },
 ];

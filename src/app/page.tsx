@@ -8,6 +8,7 @@ import CareerCounter from "@/components/career/CareerCounter";
 import FeaturedWorks from "@/components/FeaturedWorks";
 import Services from "@/components/Services";
 import Clients from "@/components/Clients";
+import AiDelight from "@/components/AiDelight";
 import HowIWork from "@/components/HowIWork";
 import Voices from "@/components/Voices";
 import Beyond from "@/components/Beyond";
@@ -30,6 +31,7 @@ export default function Home() {
         <ChapterProducts />
         <CareerCounter />
         <FeaturedWorks limit={4} />
+        <AiDelight />
         <Clients />
         <Services />
         <HowIWork />

@@ -6,9 +6,9 @@ import { useGsap } from "@/components/career/useGsap";
 
 // Numbered steps (Double Diamond phases), laid out like the reference's "How we work".
 const STEPS = [
-  { title: "Discover the Right Problem", text: "Research before pixels: interviews, UX audits, competitors and data, until the real problem is clear.", img: "/img/orange-3.webp" },
+  { title: "Discover the Right Problem", text: "Research before pixels: interviews, UX audits, competitors and data, with AI to help synthesise it, until the real problem is clear.", img: "/img/orange-3.webp" },
   { title: "Define It Sharply", text: "Turn findings into problem statements, user flows and success metrics everyone agrees on.", img: "/img/ejar-2.webp" },
-  { title: "Develop and Explore", text: "Explore wide with wireframes, prototypes and UI directions, then converge on the strongest one.", img: "/img/budget-2.webp" },
+  { title: "Develop and Explore", text: "Explore wide with wireframes, UI directions and AI-built working prototypes, then converge on the strongest one.", img: "/img/budget-2.webp" },
   { title: "Deliver with Clarity", text: "Test with real users, refine, hand off every asset and support the build through launch.", img: "/img/otida-2.webp" },
 ];
 

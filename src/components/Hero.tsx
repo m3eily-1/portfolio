@@ -76,7 +76,8 @@ export default function Hero() {
           .timeline({ defaults: { ease: "expo.out" }, delay: 0.15 })
           .from(".hero-portrait-in", { yPercent: 14, autoAlpha: 0, duration: 2 }, 0.25)
           .from(".hero-hi", { autoAlpha: 0, y: 14, duration: 1 }, 0.9)
-          .from(title.lines, { yPercent: 140, stagger: 0.12, duration: 1.4 }, 0.95);
+          .from(title.lines, { yPercent: 140, stagger: 0.12, duration: 1.4 }, 0.95)
+          .from(".hero-sub", { autoAlpha: 0, y: 14, duration: 1.1 }, 1.4);
 
         gsap
           .timeline({ scrollTrigger: { trigger: el, start: "top top", end: "bottom top", scrub: true } })
@@ -111,6 +112,7 @@ export default function Hero() {
           <br />
           Lead
         </h1>
+        <p className="hero-sub">Designing delightful, AI-powered products, and building the prototypes myself.</p>
       </div>
 
 
