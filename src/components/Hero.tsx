@@ -112,7 +112,7 @@ export default function Hero() {
           <br />
           Lead
         </h1>
-        <p className="hero-sub">Designing delightful, AI-powered products, and building the prototypes myself.</p>
+        <p className="hero-sub">Designing delightful products people love to use, down to the smallest detail.</p>
       </div>
 
 
