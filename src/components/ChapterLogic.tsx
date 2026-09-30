@@ -20,7 +20,7 @@ const CODE: Tok[][] = [
   [["const", "k"], [" ux = ahmed."], ["merge", "f"], ["(curiosity, logic);"]],
   [],
   [["export const", "k"], [" Button", "t"], [" = styled."], ["button", "f"], ["`"]],
-  [["  background", "p"], [": "], ["#FFD372", "n"], [";"]],
+  [["  background", "p"], [": "], ["#AF986A", "n"], [";"]],
   [["  color", "p"], [": "], ["#12100E", "n"], [";"]],
   [["  padding", "p"], [": "], ["18px 30px", "n"], [";"]],
   [["  font", "p"], [": "], ['500 16px "Inter Tight"', "s"], [";"]],
@@ -34,7 +34,7 @@ const FULL = CODE.map((l) => l.map((t) => t[0]).join("")).join("\n");
 // Preview steps unlock once the code has typed past these markers.
 const STEPS: [string, string][] = [
   ["styled.button`", "has-el"],
-  ["#FFD372;", "has-bg"],
+  ["#AF986A;", "has-bg"],
   ["#12100E;", "has-color"],
   ["18px 30px;", "has-pad"],
   ['"Inter Tight";', "has-font"],

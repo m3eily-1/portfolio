@@ -5,7 +5,7 @@
   --paper: #f4efe6;
   --mute: rgba(237, 230, 218, 0.56);
   --line: rgba(237, 230, 218, 0.14);
-  --sun: #ffd372;
+  --sun: #af986a; /* silk gold: the hero shader's hue (40°, 30% sat), lifted for contrast */
   --signal: #e4572e;
   --pad: 6vw;
   --serif: "Times New Roman", Times, serif;

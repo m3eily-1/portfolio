@@ -6,7 +6,7 @@ import { gsap, prefersReducedMotion } from "@/lib/gsap";
 // Chapter 03 — 2018 → now. Scattered parts snap into a design system, then into a product.
 
 const SWATCHES = [
-  { name: "Sunflower", hex: "#FFD372" },
+  { name: "Silk", hex: "#AF986A" },
   { name: "Ink", hex: "#12100E" },
   { name: "Bone", hex: "#EDE6DA" },
   { name: "Stone", hex: "#8A8175" },

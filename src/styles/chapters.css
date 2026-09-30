@@ -142,8 +142,8 @@
 .ed-preview:not(.has-text).has-color button { color: transparent; }
 .ed-preview.has-pad button { padding: 18px 30px; }
 .ed-preview.has-font button { font: 500 16px/1 var(--sans); }
-.ed-preview.has-square button { box-shadow: 0 0 0 6px rgba(255, 211, 114, 0.18); }
-.ed-preview.has-text button { box-shadow: 0 20px 50px rgba(255, 211, 114, 0.22); }
+.ed-preview.has-square button { box-shadow: 0 0 0 6px rgba(175, 152, 106, 0.18); }
+.ed-preview.has-text button { box-shadow: 0 20px 50px rgba(175, 152, 106, 0.22); }
 .ed-term { border-top: 1px solid #1c1f26; padding: 12px 14px; font-family: var(--mono); font-size: 0.7rem; line-height: 1.8; color: #8b949e; min-height: 94px; }
 .ed-term p { opacity: 0; transform: translateY(6px); transition: opacity 0.4s, transform 0.4s var(--ease); }
 .ed-term .ed-ok { color: #3fb950; }
@@ -221,7 +221,7 @@
 .s-top i { width: 26px; height: 26px; background: var(--sun); }
 .s-chips { display: flex; gap: 6px; }
 .s-card { display: flex; flex-direction: column; gap: 5px; flex: 1; min-height: 0; }
-.s-img { flex: 1; min-height: 60px; background: linear-gradient(140deg, #e4572e, #ffd372 70%, #f4efe6); }
+.s-img { flex: 1; min-height: 60px; background: linear-gradient(140deg, #e4572e, #af986a 70%, #f4efe6); }
 .s-card p { font-family: var(--mono); font-size: 0.56rem; letter-spacing: 0.08em; text-transform: uppercase; color: #8a8a8a; }
 .s-card strong { font-family: var(--serif); font-weight: 400; font-size: 1.05rem; line-height: 1.1; }
 .fg-screen .c-btn { text-align: center; }
