@@ -12,11 +12,18 @@ function Silk() {
     const gl = c.getContext("webgl", { premultipliedAlpha: false, alpha: true });
     if (!gl) return;
     const vs = "attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}";
-    const fs = `precision mediump float;uniform vec2 r;uniform float t;uniform vec2 m;
-      float h(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
+    // highp where the GPU has it, and a sin-free hash: phones run fragment shaders at mediump,
+    // where fract(sin(x)*43758.) collapses and the silk renders flat (invisible).
+    const fs = `#ifdef GL_FRAGMENT_PRECISION_HIGH
+      precision highp float;
+      #else
+      precision mediump float;
+      #endif
+      uniform vec2 r;uniform float t;uniform vec2 m;
+      float h(vec2 p){vec3 q=fract(vec3(p.xyx)*.1031);q+=dot(q,q.yzx+33.33);return fract((q.x+q.y)*q.z);}
       float n(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(h(i),h(i+vec2(1,0)),f.x),mix(h(i+vec2(0,1)),h(i+vec2(1,1)),f.x),f.y);}
       float fbm(vec2 p){float v=0.,a=.5;for(int i=0;i<5;i++){v+=a*n(p);p*=2.02;a*=.5;}return v;}
-      void main(){vec2 uv=gl_FragCoord.xy/r;vec2 p=uv*vec2(r.x/r.y,1.)*2.4;
+      void main(){vec2 uv=gl_FragCoord.xy/r;vec2 p=gl_FragCoord.xy/min(r.x,r.y)*2.4;
         float q=fbm(p+vec2(t*.05,t*.03)+m*.4);float k=fbm(p+q*1.8+vec2(-t*.04,t*.06));
         float glow=smoothstep(.25,.85,k)*(.35+uv.y*.75);vec3 col=mix(vec3(.07,.06,.05),vec3(1.,.83,.45),glow*.8);
         col=mix(col,vec3(.9,.34,.18),smoothstep(.62,1.,k)*.25);gl_FragColor=vec4(col,glow*.9);}`;
@@ -59,7 +66,7 @@ function Silk() {
       mouse.y += (mouse.ty - mouse.y) * 0.05;
       gl.viewport(0, 0, w, hh);
       gl.uniform2f(uR, w, hh);
-      gl.uniform1f(uT, (performance.now() - start) / 1000);
+      gl.uniform1f(uT, ((performance.now() - start) / 1000) % 1000);
       gl.uniform2f(uM, mouse.x, -mouse.y);
       gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
     };
