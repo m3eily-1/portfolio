@@ -103,6 +103,9 @@ export function createRingScene(canvas: HTMLCanvasElement, cards: RingCard[], op
     camera.fov = narrow ? 70 : 58;
     camera.position.set(0, narrow ? -0.9 : -1.25, narrow ? 3.2 : 4.1);
     camera.lookAt(0, camera.position.y, -R);
+    // Phones: lift the whole ring (~9% of the screen) so it clears the portrait's bottom fade.
+    if (narrow) camera.setViewOffset(w, h, 0, Math.round(h * 0.09), w, h);
+    else camera.clearViewOffset();
     camera.updateProjectionMatrix();
   };
   const ro = new ResizeObserver(resize);
