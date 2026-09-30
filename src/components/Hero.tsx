@@ -75,7 +75,7 @@ export default function Hero() {
         const title = new SplitText(".hero-title", { type: "lines", mask: "lines", linesClass: "hero-line" });
         gsap
           .timeline({ defaults: { ease: "expo.out" }, delay: 0.15 })
-          .from(".hero-portrait-in", { yPercent: 14, autoAlpha: 0, duration: 2 }, 0.25)
+          .from(".hero-portrait-in", { yPercent: 14, clipPath: "inset(0% 0% 100% 0%)", duration: 2 }, 0.25) // wipes in, no opacity
           .from(".hero-hi", { autoAlpha: 0, y: 14, duration: 1 }, 0.9)
           .from(title.lines, { yPercent: 140, stagger: 0.12, duration: 1.4 }, 0.95)
           .from(".hero-sub", { autoAlpha: 0, y: 14, duration: 1.1 }, 1.4);

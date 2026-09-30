@@ -18,10 +18,9 @@
 .hero-portrait {
   position: absolute; z-index: 3; top: 74px; height: var(--ph); width: calc(var(--ph) * var(--pa));
   left: calc(50% + 8px - var(--ph) * var(--phx)); pointer-events: none;
-  -webkit-mask-image: linear-gradient(to bottom, #000 62%, transparent 100%);
-          mask-image: linear-gradient(to bottom, #000 62%, transparent 100%);
 }
 .hero-portrait-in, .hero-portrait img { width: 100%; height: 100%; }
+.hero-portrait-in { clip-path: inset(0% 0% 0% 0%); } /* end state of the intro wipe */
 .hero-portrait img { object-fit: contain; object-position: top; }
 
 /* Text placed exactly like the reference hero, which uses fixed px at every desktop size:
@@ -112,7 +111,7 @@
 /* ================================================================= mobile */
 @media (max-width: 900px) {
   .hero { --ph: 50svh; height: 100svh; min-height: 620px; }
-  .hero-portrait { left: calc(50% - var(--ph) * var(--phx)); top: 17svh; -webkit-mask-image: linear-gradient(to bottom, #000 50%, transparent 92%); mask-image: linear-gradient(to bottom, #000 50%, transparent 92%); }
+  .hero-portrait { left: calc(50% - var(--ph) * var(--phx)); top: 17svh; }
   .hero-copy { left: var(--pad); right: var(--pad); top: auto; bottom: 5svh; width: auto; }
   .hero-title { font-size: 13vw; white-space: normal; }
   .st-title { font-size: 15vw; }
