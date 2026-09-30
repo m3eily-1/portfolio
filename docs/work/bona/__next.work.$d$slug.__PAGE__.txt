@@ -4,5 +4,5 @@
 4:I[97367,["/portfolio/_next/static/chunks/1wtexzuiac-ga.js","/portfolio/_next/static/chunks/0sp_1kdwxneoy.js","/portfolio/_next/static/chunks/158myu8e_yme3.js"],"OutletBoundary"]
 5:"$Sreact.suspense"
 :HL["/portfolio/_next/static/chunks/09pt2e9--3bl0.css","style"]
-0:{"rsc":["$","$1","c",{"children":[[["$","$L2",null,{}],["$","$L3",null,{"slug":"bona"}]],[["$","link","0",{"rel":"stylesheet","href":"/portfolio/_next/static/chunks/09pt2e9--3bl0.css","precedence":"next"}],["$","script","script-0",{"src":"/portfolio/_next/static/chunks/2v_l6gsq3dbzj.js","async":true}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"O3aiQ7y2BwSG4fOaVNU-M"}
+0:{"rsc":["$","$1","c",{"children":[[["$","$L2",null,{}],["$","$L3",null,{"slug":"bona"}]],[["$","link","0",{"rel":"stylesheet","href":"/portfolio/_next/static/chunks/09pt2e9--3bl0.css","precedence":"next"}],["$","script","script-0",{"src":"/portfolio/_next/static/chunks/2v_l6gsq3dbzj.js","async":true}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"1WsQclaNG-MtvChWPaOyu"}
 6:null
