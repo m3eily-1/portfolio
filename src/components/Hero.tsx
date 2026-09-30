@@ -88,7 +88,6 @@ export default function Hero() {
           .timeline({ scrollTrigger: { trigger: el, start: "top top", end: "bottom top", scrub: true } })
           .to(".hero-portrait", { yPercent: -8, ease: "none" }, 0)
           .to(".hero-copy", { yPercent: -30, autoAlpha: 0, ease: "none" }, 0)
-          .to(".hero-scroll", { autoAlpha: 0, ease: "none" }, 0)
           .to(".hero-canvas", { yPercent: 18, ease: "none" }, 0);
       }, el);
     });
@@ -124,12 +123,11 @@ export default function Hero() {
           </span>
           Let&rsquo;s talk
         </a>
+        <button className="hero-scroll" onClick={() => getLenis()?.scrollTo("#story", { duration: 1.8 })} aria-label="Scroll to the story">
+          <span>Scroll</span>
+          <i aria-hidden />
+        </button>
       </div>
-
-      <button className="hero-scroll" onClick={() => getLenis()?.scrollTo("#story", { duration: 1.8 })} aria-label="Scroll to the story">
-        <span>Scroll</span>
-        <i aria-hidden />
-      </button>
 
 
       <div ref={tag} className={`ring-tag${hover ? " is-on" : ""}`} aria-hidden>
