@@ -9,6 +9,7 @@ import type { RingCard, RingScene } from "@/lib/ringScene";
 import { navigate } from "@/components/Transition";
 import HeroBg from "@/components/HeroBg";
 import { getLenis } from "@/lib/scroll";
+import Arrow from "@/components/Arrow";
 
 // Every mockup in the PDF, each linked to its case study.
 const CARDS: RingCard[] = projects.flatMap((p) => p.images.map((src) => ({ src, slug: p.slug, label: `${p.name} — ${p.category}` })));
@@ -80,12 +81,14 @@ export default function Hero() {
           .from(".hero-hi", { autoAlpha: 0, y: 14, duration: 1 }, 0.9)
           .from(title.lines, { yPercent: 140, stagger: 0.12, duration: 1.4 }, 0.95)
           .from(".hero-sub", { autoAlpha: 0, y: 14, duration: 1.1 }, 1.4)
-          .from(".hero-scroll", { autoAlpha: 0, y: 14, duration: 1.1 }, 1.55);
+          .from(".hero-cta", { autoAlpha: 0, y: 14, duration: 1.1 }, 1.55)
+          .from(".hero-scroll", { autoAlpha: 0, duration: 1.2 }, 1.8);
 
         gsap
           .timeline({ scrollTrigger: { trigger: el, start: "top top", end: "bottom top", scrub: true } })
           .to(".hero-portrait", { yPercent: -8, ease: "none" }, 0)
           .to(".hero-copy", { yPercent: -30, autoAlpha: 0, ease: "none" }, 0)
+          .to(".hero-scroll", { autoAlpha: 0, ease: "none" }, 0)
           .to(".hero-canvas", { yPercent: 18, ease: "none" }, 0);
       }, el);
     });
@@ -115,11 +118,18 @@ export default function Hero() {
           Product Design Lead
         </h1>
         <p className="hero-sub">Designing delightful products people love to use, down to the smallest detail.</p>
-        <button className="hero-scroll" onClick={() => getLenis()?.scrollTo("#story", { duration: 1.8 })} aria-label="Scroll to the story">
-          <span>Scroll</span>
-          <i aria-hidden />
-        </button>
+        <a className="btn btn--light hero-cta" href={`mailto:${person.email}`}>
+          <span className="btn-ico">
+            <Arrow />
+          </span>
+          Let&rsquo;s talk
+        </a>
       </div>
+
+      <button className="hero-scroll" onClick={() => getLenis()?.scrollTo("#story", { duration: 1.8 })} aria-label="Scroll to the story">
+        <span>Scroll</span>
+        <i aria-hidden />
+      </button>
 
 
       <div ref={tag} className={`ring-tag${hover ? " is-on" : ""}`} aria-hidden>

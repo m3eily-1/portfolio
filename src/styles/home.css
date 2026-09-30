@@ -32,7 +32,8 @@
 .hero-title { white-space: nowrap; } /* SplitText writes an inline text-align */
 .hero-hi { margin-bottom: 9px; }
 /* Scroll indicator: a label over a thin track with a gold dash running down it. */
-.hero-scroll { margin-top: 32px; display: flex; flex-direction: column; align-items: center; gap: 10px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--grey); transition: color 0.3s; }
+.hero-cta { margin-top: 28px; }
+.hero-scroll { position: absolute; z-index: 4; left: 0; right: 0; bottom: 28px; width: fit-content; margin-inline: auto; display: flex; flex-direction: column; align-items: center; gap: 10px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--grey); transition: color 0.3s; }
 .hero-scroll:hover { color: var(--bone); }
 .hero-scroll i { position: relative; width: 1px; height: 44px; overflow: hidden; background: var(--line); }
 .hero-scroll i::after { content: ""; position: absolute; left: 0; top: 0; width: 1px; height: 16px; background: var(--sun); animation: hero-scroll 1.8s var(--ease) infinite; }
@@ -119,8 +120,10 @@
 @media (max-width: 900px) {
   .hero { --ph: 50svh; height: 100svh; min-height: 620px; }
   .hero-portrait { left: calc(50% - var(--ph) * var(--phx)); top: 17svh; -webkit-mask-image: linear-gradient(to bottom, #000 50%, transparent 92%); mask-image: linear-gradient(to bottom, #000 50%, transparent 92%); }
-  .hero-copy { left: var(--pad); right: var(--pad); top: auto; bottom: 5svh; width: auto; }
-  .hero-title { font-size: 11vw; } /* one line: the title is ~7.7em wide, the column 90vw */
+  .hero-copy { left: var(--pad); right: var(--pad); top: auto; bottom: 92px; width: auto; } /* clears the scroll indicator */
+  .hero-scroll { bottom: 18px; gap: 8px; }
+  .hero-scroll i { height: 32px; }
+  .hero-title { font-size: 9.6vw; padding-inline: 6vw; } /* one line (~7.7em wide) with side breathing room: ~74vw of text in a 90vw column */
   .st-title { font-size: 15vw; }
   .vo-card { width: 80vw; min-height: 50svh; }
   .by-item, .by-item.is-flip { grid-template-columns: 1fr; }
