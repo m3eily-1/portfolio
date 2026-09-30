@@ -166,7 +166,7 @@
 /* 03 ticket */
 .dl-demo--3d { perspective: 700px; }
 .dl-ticket { width: 72%; padding: 20px 20px 18px; background: var(--ink); color: var(--bone); display: flex; flex-direction: column; gap: 6px; position: relative; transform-style: preserve-3d; box-shadow: 0 20px 40px rgba(18, 17, 13, 0.25);
-  background-image: radial-gradient(circle at var(--gx, 50%) var(--gy, 0%), rgba(175, 152, 106, 0.35), transparent 55%); border-left: 6px solid var(--sun); }
+  background-image: radial-gradient(circle at var(--gx, 50%) var(--gy, 0%), rgba(145, 123, 80, 0.35), transparent 55%); border-left: 6px solid var(--sun); }
 .dl-ticket p { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(237, 230, 218, 0.6); }
 .dl-ticket strong { font-family: var(--serif); font-weight: 400; font-size: 22px; line-height: 1.1; }
 .dl-stub { margin-top: 10px; padding-top: 10px; border-top: 1px dashed rgba(237, 230, 218, 0.3); font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sun); }

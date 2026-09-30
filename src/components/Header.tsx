@@ -88,7 +88,7 @@ export default function Header() {
     <>
     <header ref={root} className="hdr">
       <button className="hdr-name" onClick={() => (path === "/" ? getLenis()?.scrollTo(0, { duration: 1.6 }) : navigate(router, "/"))}>
-        <img className="logo" src="/logo/logo-am.svg?v=2" alt={person.name} />
+        <img className="logo" src="/logo/logo-am.svg?v=3" alt={person.name} />
       </button>
       <nav className="hdr-nav">
         {LINKS.map((l) => (
