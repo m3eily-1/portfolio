@@ -99,7 +99,7 @@
 .fw-img.is-ph, .hw-img.is-ph { background: #3a3733; }
 .sv-img.is-ph { background: #c9c2b6; }
 
-/* ============================================================== AI & delight */
+/* ======================================================================= AI */
 .ai { padding: 16svh var(--pad); display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr); gap: 6vw; align-items: center; }
 .ai-l { display: flex; flex-direction: column; gap: 26px; }
 .ai-title { font-family: var(--serif); font-weight: 400; font-size: clamp(2.8rem, 5.4vw, 5.8rem); line-height: 0.95; letter-spacing: -0.04em; }
@@ -133,3 +133,48 @@
   .ai-chat { min-height: 0; }
 }
 
+
+/* ================================================================== delight */
+.dl { background: var(--bone); color: var(--ink); padding: 16svh var(--pad); }
+.dl .label { color: rgba(18, 17, 13, 0.55); }
+.dl .label span { color: var(--signal); }
+.dl-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 4vw; row-gap: 18px; align-items: end; margin-bottom: 8svh; }
+.dl-head .label { grid-column: 1 / -1; }
+.dl-title { font-family: var(--serif); font-weight: 400; font-size: clamp(2.8rem, 5.4vw, 5.8rem); line-height: 0.95; letter-spacing: -0.04em; }
+.dl-title em { color: var(--signal); }
+.dl-lede { max-width: 36ch; color: rgba(18, 17, 13, 0.7); font-size: 18px; line-height: 1.45; }
+.dl-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.dl-tile { background: #fff; display: flex; flex-direction: column; box-shadow: 0 1px 0 rgba(18, 17, 13, 0.06); }
+.dl-demo { height: 260px; display: grid; place-items: center; position: relative; background: #f4efe6; border-bottom: 1px solid rgba(18, 17, 13, 0.08); gap: 10px; align-content: center; justify-items: center; }
+.dl-copy { padding: 22px 22px 26px; display: grid; grid-template-columns: 2.2rem 1fr; column-gap: 8px; row-gap: 6px; }
+.dl-copy b { font-family: var(--mono); font-weight: 400; font-size: 12px; color: var(--signal); padding-top: 6px; grid-row: span 2; }
+.dl-copy h3 { font-family: var(--serif); font-weight: 400; font-size: 24px; line-height: 1.05; letter-spacing: -0.03em; }
+.dl-copy p { font-size: 15px; line-height: 1.4; color: rgba(18, 17, 13, 0.65); }
+/* 01 like */
+.dl-like { position: relative; width: 72px; height: 72px; display: grid; place-items: center; background: #fff; box-shadow: 0 10px 30px rgba(18, 17, 13, 0.12); }
+.dl-like svg path { fill: none; stroke: var(--ink); stroke-width: 1.6; transition: fill 0.2s, stroke 0.2s; }
+.dl-like.is-on svg path { fill: var(--signal); stroke: var(--signal); }
+.dl-bit { position: absolute; left: 50%; top: 50%; width: 7px; height: 7px; margin: -3.5px; background: var(--sun); pointer-events: none; }
+.dl-bit:nth-child(3n) { background: var(--signal); }
+.dl-count { font-family: var(--mono); font-size: 13px; color: rgba(18, 17, 13, 0.6); }
+/* 02 toggle (square) */
+.dl-toggle { width: 88px; height: 48px; background: #d9d2c5; position: relative; transition: background 0.3s; }
+.dl-toggle span { position: absolute; left: 4px; top: 4px; width: 40px; height: 40px; background: #fff; box-shadow: 0 4px 10px rgba(18, 17, 13, 0.18); }
+.dl-toggle.is-on { background: var(--ink); }
+.dl-toggle.is-on span { background: var(--sun); }
+.dl-state { font-size: 14px; color: rgba(18, 17, 13, 0.7); min-height: 1.4em; }
+/* 03 ticket */
+.dl-demo--3d { perspective: 700px; }
+.dl-ticket { width: 72%; padding: 20px 20px 18px; background: var(--ink); color: var(--bone); display: flex; flex-direction: column; gap: 6px; position: relative; transform-style: preserve-3d; box-shadow: 0 20px 40px rgba(18, 17, 13, 0.25);
+  background-image: radial-gradient(circle at var(--gx, 50%) var(--gy, 0%), rgba(255, 211, 114, 0.35), transparent 55%); border-left: 6px solid var(--sun); }
+.dl-ticket p { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(237, 230, 218, 0.6); }
+.dl-ticket strong { font-family: var(--serif); font-weight: 400; font-size: 22px; line-height: 1.1; }
+.dl-stub { margin-top: 10px; padding-top: 10px; border-top: 1px dashed rgba(237, 230, 218, 0.3); font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sun); }
+/* 04 magnet */
+.dl-magnet { background: var(--ink); color: var(--sun); padding: 16px 28px; font-family: var(--serif); font-size: 20px; letter-spacing: -0.02em; }
+@media (max-width: 900px) {
+  .dl-head { grid-template-columns: 1fr; }
+  .dl-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .dl-demo { height: 200px; }
+}
+@media (max-width: 560px) { .dl-grid { grid-template-columns: 1fr; } }
