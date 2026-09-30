@@ -8,6 +8,7 @@ import { projects } from "@/data/work";
 import type { RingCard, RingScene } from "@/lib/ringScene";
 import { navigate } from "@/components/Transition";
 import HeroBg from "@/components/HeroBg";
+import Arrow from "@/components/Arrow";
 
 // Every mockup in the PDF, each linked to its case study.
 const CARDS: RingCard[] = projects.flatMap((p) => p.images.map((src) => ({ src, slug: p.slug, label: `${p.name} — ${p.category}` })));
@@ -78,7 +79,8 @@ export default function Hero() {
           .from(".hero-portrait-in", { yPercent: 14, autoAlpha: 0, duration: 2 }, 0.25)
           .from(".hero-hi", { autoAlpha: 0, y: 14, duration: 1 }, 0.9)
           .from(title.lines, { yPercent: 140, stagger: 0.12, duration: 1.4 }, 0.95)
-          .from(".hero-sub", { autoAlpha: 0, y: 14, duration: 1.1 }, 1.4);
+          .from(".hero-sub", { autoAlpha: 0, y: 14, duration: 1.1 }, 1.4)
+          .from(".hero-cta", { autoAlpha: 0, y: 14, duration: 1.1 }, 1.55);
 
         gsap
           .timeline({ scrollTrigger: { trigger: el, start: "top top", end: "bottom top", scrub: true } })
@@ -113,6 +115,12 @@ export default function Hero() {
           Product Design Lead
         </h1>
         <p className="hero-sub">Designing delightful products people love to use, down to the smallest detail.</p>
+        <a className="btn btn--light hero-cta" href={`mailto:${person.email}`}>
+          <span className="btn-ico">
+            <Arrow />
+          </span>
+          Let&rsquo;s talk
+        </a>
       </div>
 
 

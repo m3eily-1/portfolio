@@ -8,13 +8,7 @@ import { gsap, prefersReducedMotion } from "@/lib/gsap";
 import { navigate } from "@/components/Transition";
 import Arrow from "@/components/Arrow";
 
-const LINKS = [
-  { id: "story", label: "Story" },
-  { id: "work", label: "Work" },
-  { id: "process", label: "Process" },
-  { id: "contact", label: "Contact" },
-];
-// The phone menu has room for a couple more.
+// Header is logo + Menu on every screen size; the links live in the overlay.
 const MENU = [
   { id: "story", label: "Story" },
   { id: "work", label: "Work" },
@@ -31,7 +25,7 @@ export default function Header() {
   const menu = useRef<HTMLDivElement>(null);
   const [open, setOpen] = useState(false);
 
-  // Mobile menu: lock the page, reveal the panel top-down, stagger the links in.
+  // Menu: lock the page, reveal the panel top-down, stagger the links in.
   useEffect(() => {
     const el = menu.current;
     if (!el) return;
@@ -50,13 +44,12 @@ export default function Header() {
     }
   }, [open]);
 
-  // Close if the route changes or the screen grows past the phone layout.
+  // Close on route change or Escape.
   useEffect(() => setOpen(false), [path]);
   useEffect(() => {
-    const mq = window.matchMedia("(min-width: 901px)");
-    const on = () => mq.matches && setOpen(false);
-    mq.addEventListener("change", on);
-    return () => mq.removeEventListener("change", on);
+    const on = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    window.addEventListener("keydown", on);
+    return () => window.removeEventListener("keydown", on);
   }, []);
 
   // Hide on scroll down, show on scroll up; compact once past the hero.
@@ -90,20 +83,7 @@ export default function Header() {
       <button className="hdr-name" onClick={() => (path === "/" ? getLenis()?.scrollTo(0, { duration: 1.6 }) : navigate(router, "/"))}>
         <img className="logo" src="/logo/logo-am.svg?v=3" alt={person.name} />
       </button>
-      <nav className="hdr-nav">
-        {LINKS.map((l) => (
-          <button key={l.id} onClick={() => go(l.id)}>
-            {l.label}
-          </button>
-        ))}
-      </nav>
-      <a className="btn btn--line hdr-cta" href={`mailto:${person.email}`}>
-        <span className="btn-ico">
-          <Arrow />
-        </span>
-        Let&rsquo;s talk
-      </a>
-      <button className="hdr-menu" onClick={() => setOpen((v) => !v)} aria-expanded={open} aria-controls="mobile-menu">
+      <button className="hdr-menu" onClick={() => setOpen((v) => !v)} aria-expanded={open} aria-controls="site-menu">
         <span>{open ? "Close" : "Menu"}</span>
         <i aria-hidden className={open ? "is-x" : ""}>
           <b />
@@ -112,7 +92,7 @@ export default function Header() {
       </button>
     </header>
 
-    <div ref={menu} id="mobile-menu" className="mm" aria-hidden={!open}>
+    <div ref={menu} id="site-menu" className="mm" aria-hidden={!open}>
       <nav className="mm-nav">
         {MENU.map((l, i) => (
           <button key={l.id} className="mm-link" onClick={() => goFromMenu(l.id)} tabIndex={open ? 0 : -1}>

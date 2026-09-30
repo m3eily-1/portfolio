@@ -31,6 +31,7 @@
 .hero-copy .hero-line { text-align: center !important; }
 .hero-title { white-space: nowrap; } /* SplitText writes an inline text-align */
 .hero-hi { margin-bottom: 9px; }
+.hero-cta { margin-top: 28px; }
 .hero-sub { margin-top: 16px; max-width: 360px; font-size: 18px; line-height: 1.15; letter-spacing: -0.03em; color: var(--grey); }
 .hero-hi { font-family: var(--mono); font-weight: 500; font-size: 12px; line-height: 1.4; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); }
 .hero-title { font-family: var(--serif); font-weight: 400; font-size: 64px; line-height: 1; letter-spacing: -0.04em; color: #fff; }
