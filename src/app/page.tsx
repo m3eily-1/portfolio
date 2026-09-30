@@ -29,7 +29,7 @@ export default function Home() {
         <ChapterLogic />
         <ChapterProducts />
         <CareerCounter />
-        <FeaturedWorks />
+        <FeaturedWorks limit={4} />
         <Clients />
         <Services />
         <HowIWork />

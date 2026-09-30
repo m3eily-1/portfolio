@@ -29,7 +29,7 @@ export default function Transition() {
         if (!el.current || prefersReducedMotion()) return resolve();
         if (label.current) {
           const slug = href.startsWith("/work/") ? href.slice(6) : "";
-          label.current.textContent = getProject(slug)?.name ?? "Ahmed Mealy";
+          label.current.textContent = href === "/work" ? "All works" : getProject(slug)?.name ?? "Ahmed Mealy";
         }
         getLenis()?.stop();
         gsap.fromTo(el.current, { yPercent: 100 }, { yPercent: 0, duration: 0.8, ease: "expo.inOut", onComplete: () => resolve() });

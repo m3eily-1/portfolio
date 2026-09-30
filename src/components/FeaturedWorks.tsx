@@ -12,10 +12,18 @@ import { withBase } from "@/lib/scroll";
 // Two staggered columns of case-study cards, like the reference's "Featured Works".
 // Placeholder: solid grey thumbnails until Ahmed's final images arrive. Set to false to show the mockups again.
 const PLACEHOLDER = true;
-export default function FeaturedWorks() {
+type Props = {
+  /** Show only the first N projects plus an "All works" button (home page). */
+  limit?: number;
+  /** Page heading variant for /work. */
+  all?: boolean;
+};
+
+export default function FeaturedWorks({ limit, all = false }: Props) {
   const root = useRef<HTMLElement>(null);
   const router = useRouter();
-  const cols = [projects.filter((_, i) => i % 2 === 0), projects.filter((_, i) => i % 2 === 1)];
+  const list = limit ? projects.slice(0, limit) : projects;
+  const cols = [list.filter((_, i) => i % 2 === 0), list.filter((_, i) => i % 2 === 1)];
 
   useGsap(root, (el) => {
     if (prefersReducedMotion()) return;
@@ -35,13 +43,23 @@ export default function FeaturedWorks() {
       <div className="fw-head">
         <div className="fw-head-l">
           <p className="label">
-            <span>(02)</span> Selected work
+            <span>{all ? "(All)" : "(02)"}</span> {all ? `${projects.length} case studies` : "Selected work"}
           </p>
-          <p className="fw-lede">Eleven of the 40+ products I&rsquo;ve shaped, across design systems, government, fintech, telecom and health.</p>
+          <p className="fw-lede">
+            {all
+              ? "Every case study, from design systems and government platforms to fintech, telecom and health."
+              : "A few of the 40+ products I\u2019ve shaped, across design systems, government, fintech, telecom and health."}
+          </p>
         </div>
-        <h2 className="fw-title">
-          Featured <em>Works</em>
-        </h2>
+        {all ? (
+          <h1 className="fw-title">
+            All <em>Works</em>
+          </h1>
+        ) : (
+          <h2 className="fw-title">
+            Featured <em>Works</em>
+          </h2>
+        )}
       </div>
 
       <div className="fw-grid">
@@ -78,6 +96,24 @@ export default function FeaturedWorks() {
           </div>
         ))}
       </div>
+
+      {limit && limit < projects.length && (
+        <div className="fw-cta">
+          <a
+            className="btn btn--line"
+            href={withBase("/work")}
+            onClick={(e) => {
+              e.preventDefault();
+              navigate(router, "/work");
+            }}
+          >
+            <span className="btn-ico">
+              <Arrow />
+            </span>
+            All works ({projects.length})
+          </a>
+        </div>
+      )}
     </section>
   );
 }

@@ -19,7 +19,7 @@ export default function Clients() {
   useGsap(root, () => {
     if (prefersReducedMotion()) return;
     gsap.from(".cl2-head > *", { y: 30, autoAlpha: 0, stagger: 0.1, duration: 1.1, scrollTrigger: { trigger: ".cl2", start: "top 75%" } });
-    gsap.from(".cl2-tile", { y: 40, autoAlpha: 0, scale: 0.92, stagger: { each: 0.035, from: "start" }, duration: 0.9, ease: "power3.out", scrollTrigger: { trigger: ".cl2-grid", start: "top 85%" } });
+    gsap.from(".cl2-marquee", { autoAlpha: 0, y: 30, duration: 1.2, scrollTrigger: { trigger: ".cl2-marquee", start: "top 90%" } });
   });
   return (
     <section ref={root} className="cl2" id="clients">
@@ -32,13 +32,20 @@ export default function Clients() {
         </h2>
         <p className="cl2-lede">40+ products for local and global clients, across fintech, government, telecom, health, retail and media.</p>
       </div>
-      <ul className="cl2-grid">
-        {CLIENTS.map(([file, name]) => (
-          <li key={file} className="cl2-tile">
-            <img src={`/img/clients/${file}.webp`} alt={name === "Client" ? "Client logo" : name} loading="lazy" />
-          </li>
-        ))}
-      </ul>
+      {/* One infinite line: the list is rendered twice and the track slides by exactly one copy. */}
+      <div className="cl2-marquee">
+        <div className="cl2-track">
+          {[0, 1].map((copy) => (
+            <ul key={copy} className="cl2-row" aria-hidden={copy === 1}>
+              {CLIENTS.map(([file, name]) => (
+                <li key={file} className="cl2-tile">
+                  <img src={`/img/clients/${file}.webp`} alt={copy === 1 ? "" : name === "Client" ? "Client logo" : name} loading="eager" />
+                </li>
+              ))}
+            </ul>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }

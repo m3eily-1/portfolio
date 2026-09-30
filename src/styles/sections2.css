@@ -21,6 +21,10 @@
 .fw-card:hover .fw-meta h3 { color: var(--sun); }
 .fw-card:hover .fw-go { background: var(--sun); color: var(--ink); border-color: var(--sun); }
 
+.fw-cta { display: flex; justify-content: center; margin-top: 4svh; }
+.fw-cta .btn { padding-block: 5px; }
+.fwp { padding-top: 60px; } /* /work page: room under the fixed header */
+
 /* ================================================================ services */
 .sv { background: var(--bone); color: var(--ink); padding: 16svh var(--pad); display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1fr); gap: 6vw; align-items: start; }
 .sv .label { color: rgba(18, 17, 13, 0.55); margin-bottom: 20px; }
@@ -78,15 +82,18 @@
 .cl2-title { font-family: var(--serif); font-weight: 400; font-size: clamp(2.8rem, 5.4vw, 5.8rem); line-height: 0.95; letter-spacing: -0.04em; }
 .cl2-title em { color: var(--sun); }
 .cl2-lede { max-width: 34ch; color: var(--mute); font-size: 18px; line-height: 1.4; }
-.cl2-grid { display: grid; grid-template-columns: repeat(9, minmax(0, 1fr)); gap: 12px; }
-.cl2-tile { aspect-ratio: 1; background: #fff; display: grid; place-items: center; padding: 18%; transition: transform 0.5s var(--ease), box-shadow 0.4s; }
+.cl2-marquee { overflow: hidden; margin: -24px calc(var(--pad) * -1); padding: 24px 0 48px; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.cl2-track { display: flex; width: max-content; animation: cl2-scroll 60s linear infinite; }
+.cl2-marquee:hover .cl2-track { animation-play-state: paused; }
+.cl2-row { display: flex; gap: 12px; padding-right: 12px; }
+@keyframes cl2-scroll { to { transform: translateX(-50%); } }
+.cl2-tile { flex: none; width: 150px; aspect-ratio: 1; background: #fff; display: grid; place-items: center; padding: 28px; transition: transform 0.5s var(--ease), box-shadow 0.4s; }
 .cl2-tile img { max-width: 100%; max-height: 100%; object-fit: contain; filter: grayscale(1); opacity: 0.75; transition: filter 0.4s, opacity 0.4s; }
 .cl2-tile:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35); }
 .cl2-tile:hover img { filter: none; opacity: 1; }
 @media (max-width: 900px) {
   .cl2-head { grid-template-columns: 1fr; }
-  .cl2-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
-}
+  }
 
 /* Solid grey image placeholders (Featured Works, Services, How I work). */
 .fw-img.is-ph, .hw-img.is-ph { background: #3a3733; }
