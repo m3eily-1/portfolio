@@ -115,7 +115,7 @@
   .hero { --ph: 50svh; height: 100svh; min-height: 620px; }
   .hero-portrait { left: calc(50% - var(--ph) * var(--phx)); top: 17svh; -webkit-mask-image: linear-gradient(to bottom, #000 50%, transparent 92%); mask-image: linear-gradient(to bottom, #000 50%, transparent 92%); }
   .hero-copy { left: var(--pad); right: var(--pad); top: auto; bottom: 5svh; width: auto; }
-  .hero-title { font-size: 13vw; white-space: normal; }
+  .hero-title { font-size: 11vw; } /* one line: the title is ~7.7em wide, the column 90vw */
   .st-title { font-size: 15vw; }
   .vo-card { width: 80vw; min-height: 50svh; }
   .by-item, .by-item.is-flip { grid-template-columns: 1fr; }
