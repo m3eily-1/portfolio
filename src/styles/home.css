@@ -8,9 +8,9 @@
   --pa: 1708 / 1916; /* portrait aspect (w / h) */
   --phx: 997 / 1916; /* head centre, as a fraction of the image height */
 }
-.hero-canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; touch-action: pan-y; }
-.hero-fade {
-  position: absolute; inset: 0; z-index: 2; pointer-events: none;
+.hero-canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 2; touch-action: pan-y; }
+.hero-fade { /* shades the background only; the cards sit above it, fully solid */
+  position: absolute; inset: 0; z-index: 1; pointer-events: none;
   background:
     linear-gradient(90deg, var(--ink) 0%, rgba(18, 16, 14, 0) 14%, rgba(18, 16, 14, 0) 86%, var(--ink) 100%),
     linear-gradient(0deg, var(--ink) 6%, rgba(18, 16, 14, 0.85) 26%, rgba(18, 16, 14, 0) 52%);

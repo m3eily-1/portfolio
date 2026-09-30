@@ -65,7 +65,7 @@ export function createRingScene(canvas: HTMLCanvasElement, cards: RingCard[], op
   const corners = new THREE.CanvasTexture(mc);
 
   cards.forEach((c, i) => {
-    const mat = new THREE.MeshBasicMaterial({ color: opts.fill ?? "#1c1916", alphaMap: corners, transparent: true, opacity: 0, side: THREE.DoubleSide });
+    const mat = new THREE.MeshBasicMaterial({ color: opts.fill ?? "#1c1916", alphaMap: corners, alphaTest: 0.5, side: THREE.DoubleSide });
     const m = new THREE.Mesh(geo, mat);
     m.rotation.y = -i * step;
     m.userData = { card: c, hover: 0, reveal: 0, delay: i * 0.05 };
@@ -183,11 +183,11 @@ export function createRingScene(canvas: HTMLCanvasElement, cards: RingCard[], op
       const u = m.userData;
       u.reveal = Math.min(1, Math.max(0, (t - 0.35 - u.delay) / 0.9));
       u.hover += ((m === hovered ? 1 : 0) - u.hover) * 0.12;
-      const mat = m.material as THREE.MeshBasicMaterial;
+      // Solid cards: the reveal grows them in (no opacity), so they read as opaque behind the portrait.
       const e = 1 - Math.pow(1 - u.reveal, 3);
-      mat.opacity = e * (0.82 + u.hover * 0.18);
+      m.visible = e > 0.001;
       const s = 1 + u.hover * 0.04;
-      m.scale.set(s, s * (0.6 + e * 0.4), s);
+      m.scale.set(s, s * e, s);
       m.position.y = (1 - e) * -0.6 + u.hover * 0.08;
     }
     renderer.render(scene, camera);

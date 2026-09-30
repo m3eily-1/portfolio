@@ -84,7 +84,7 @@ export default function Hero() {
           .timeline({ scrollTrigger: { trigger: el, start: "top top", end: "bottom top", scrub: true } })
           .to(".hero-portrait", { yPercent: -8, ease: "none" }, 0)
           .to(".hero-copy", { yPercent: -30, autoAlpha: 0, ease: "none" }, 0)
-          .to(".hero-canvas", { yPercent: 18, autoAlpha: 0.2, ease: "none" }, 0);
+          .to(".hero-canvas", { yPercent: 18, ease: "none" }, 0);
       }, el);
     });
     return () => {
