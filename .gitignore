@@ -1,0 +1,9 @@
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+.DS_Store
+# local-only: rejected first drafts and review screenshots
+_rejected-v1/
+review/

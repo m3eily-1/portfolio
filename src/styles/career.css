@@ -1,0 +1,31 @@
+/* Chapter 04 — career: a giant year rolls on the left while the roles pass on the right. Light (bone) like Chapter 03. */
+.cr { background: var(--bone); color: var(--ink); position: relative; }
+.cr .label { color: rgba(18, 17, 13, 0.55); }
+.cr .label span { color: var(--signal); }
+.cr-head { display: flex; flex-direction: column; gap: 14px; }
+.cr-title { font-family: var(--serif); font-weight: 400; font-size: clamp(3rem, 6vw, 6.4rem); line-height: 0.95; letter-spacing: -0.04em; }
+.cr-title em { color: var(--signal); }
+.cr-lede { font-size: 19px; line-height: 1.4; color: rgba(18, 17, 13, 0.7); max-width: 32ch; }
+
+/* ---------------------------------------------------------- D · Year counter */
+.yc-stage { height: 100svh; overflow: hidden; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr); gap: 5vw; padding: 110px var(--pad) 0; }
+.yc-left { display: flex; flex-direction: column; justify-content: space-between; padding-bottom: 6svh; }
+.yc-logo { display: block; height: 30px; width: auto; max-width: 180px; object-fit: contain; object-position: left center; margin: 16px 0 4px; filter: grayscale(1); opacity: 0.6; transition: filter 0.4s, opacity 0.4s; }
+.yc-role.is-on .yc-logo { filter: none; opacity: 1; }
+.yc-year { display: flex; font-family: var(--serif); font-size: clamp(8rem, 22vw, 24rem); line-height: 1; letter-spacing: -0.05em; color: var(--signal); }
+.yc-col { display: block; height: 1em; overflow: hidden; }
+.yc-strip { display: flex; flex-direction: column; will-change: transform; }
+.yc-strip span { display: block; height: 1em; line-height: 1; text-align: center; }
+.yc-right { position: relative; overflow: hidden; -webkit-mask-image: linear-gradient(transparent, #000 12%, #000 80%, transparent); mask-image: linear-gradient(transparent, #000 12%, #000 80%, transparent); }
+.yc-roles { padding-top: 34svh; padding-bottom: 40svh; will-change: transform; }
+.yc-role { padding: 2rem 0; border-top: 1px solid rgba(18, 17, 13, 0.18); opacity: 0.25; transition: opacity 0.5s; }
+.yc-role.is-on { opacity: 1; }
+.yc-when { font-family: var(--mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(18, 17, 13, 0.55); }
+.yc-role h3 { font-family: var(--serif); font-weight: 400; font-size: clamp(2.2rem, 3.6vw, 3.8rem); line-height: 1; letter-spacing: -0.04em; margin: 10px 0 6px; }
+.yc-rt { font-size: 19px; color: rgba(18, 17, 13, 0.72); }
+.yc-role ul { margin-top: 12px; display: flex; flex-direction: column; gap: 6px; font-size: 16px; line-height: 1.4; color: rgba(18, 17, 13, 0.72); }
+
+@media (max-width: 900px) {
+  .yc-stage { grid-template-columns: 1fr; grid-template-rows: auto minmax(0, 1fr); padding-top: 80px; }
+  .yc-year { font-size: 30vw; }
+}
