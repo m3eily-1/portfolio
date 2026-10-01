@@ -1,6 +1,7 @@
 /* ============================================================ featured works */
 .fw { padding: 18svh var(--pad) 16svh; }
 .fw-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 4vw; margin-bottom: 10svh; }
+.fw-head--solo { grid-template-columns: minmax(0, 1fr); } /* home: just the title */
 .fw-head-l { display: flex; flex-direction: column; gap: 22px; padding-bottom: 1.4rem; }
 .fw-lede { max-width: 30ch; color: var(--mute); font-size: 18px; line-height: 1.4; }
 .fw-title { font-family: var(--serif); font-weight: 400; font-size: clamp(4rem, 11vw, 12.5rem); line-height: 0.85; letter-spacing: -0.04em; color: #b9a98c; text-align: right; }

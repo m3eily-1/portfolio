@@ -40,17 +40,15 @@ export default function FeaturedWorks({ limit, all = false }: Props) {
 
   return (
     <section ref={root} className="fw" id="work">
-      <div className="fw-head">
-        <div className="fw-head-l">
-          <p className="label">
-            <span>{all ? "(All)" : "(02)"}</span> {all ? `${projects.length} case studies` : "Selected work"}
-          </p>
-          <p className="fw-lede">
-            {all
-              ? "Every case study, from design systems and government platforms to fintech, telecom and health."
-              : "A few of the 40+ products I\u2019ve shaped, across design systems, government, fintech, telecom and health."}
-          </p>
-        </div>
+      <div className={`fw-head${all ? "" : " fw-head--solo"}`}>
+        {all && (
+          <div className="fw-head-l">
+            <p className="label">
+              <span>(All)</span> {projects.length} case studies
+            </p>
+            <p className="fw-lede">Every case study, from design systems and government platforms to fintech, telecom and health.</p>
+          </div>
+        )}
         {all ? (
           <h1 className="fw-title">
             All <em>Works</em>
