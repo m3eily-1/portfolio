@@ -35,7 +35,7 @@ export default function StoryIntro() {
     <section ref={root} className="st" id="story">
       <div className="st-in">
         <h2 className="st-title">
-          <span className="st-my">This is my story,</span>
+          <span className="st-my">Welcome to my story,</span>
           <br />
           from <span className="px">pixels</span> to products.
         </h2>
