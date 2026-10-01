@@ -121,7 +121,7 @@ export default function CaseStudy({ slug }: { slug: string }) {
                 <b>{String(i + 1).padStart(2, "0")}</b>
                 <div>
                   {it.head && <h3>{it.head}</h3>}
-                  <p>{it.text}</p>
+                  {it.text && <p>{it.text}</p>}
                 </div>
               </li>
             ))}

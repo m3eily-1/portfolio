@@ -1,7 +1,7 @@
 // Case studies from the PDF (pages 9–26). Copy is tightened; facts are unchanged.
 
 // Covers are the consistent mockups from scripts/make-mockups.py; images[1..] are the original PDF mockups (case-study gallery).
-export type Section = { title: string; intro?: string; items: { head?: string; text: string }[] };
+export type Section = { title: string; intro?: string; items: { head?: string; text?: string }[] };
 
 export type Project = {
   slug: string;
@@ -101,6 +101,34 @@ export const projects: Project[] = [
       },
     ],
     link: { label: "scbraga.pt", href: "https://scbraga.pt" },
+  },
+  // Not from the PDF: Ahmed's feature work at webook (Product Design Lead, 2024 – now).
+  {
+    slug: "webook",
+    name: "webook",
+    client: "webook",
+    category: "Ticketing & entertainment platform",
+    duration: "2024 – now",
+    summary: "Seven product features across webook's ticketing and entertainment platform.",
+    overview:
+      "As Product Design Lead at webook, I designed features across the platform, from signing in and paying to booking whole journeys: social login, subscriptions, cashless, vouchers and gift cards, an affiliate program, the cruise booking journey and accessibility tickets.",
+    cover: "/img/placeholder-phone.webp",
+    images: ["/img/placeholder-phone.webp"],
+    sections: [
+      {
+        title: "Features I designed",
+        items: [
+          { head: "Social login" },
+          { head: "Subscriptions" },
+          { head: "Cashless" },
+          { head: "Vouchers & gift cards" },
+          { head: "Affiliate program" },
+          { head: "Cruise booking journey" },
+          { head: "Accessibility tickets" },
+        ],
+      },
+    ],
+    link: { label: "webook.com", href: "https://webook.com" },
   },
   {
     slug: "stc-design-system",

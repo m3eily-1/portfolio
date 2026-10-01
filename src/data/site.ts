@@ -100,10 +100,9 @@ export const releases: Release[] = [
     logo: "/img/logos/webook.webp",
     role: "Product Design Lead",
     place: "Riyadh · On-site",
-    // TODO(Ahmed): replace with your own line about the webook work.
     notes: [
-      { tag: "Shipped", text: "Ticketing and live-event experiences, from discovery to the gate." },
-      { tag: "Added", text: "AI-built prototypes and 3D concept experiences for events and sports." },
+      { tag: "Shipped", text: "Social login, subscriptions, cashless payments, vouchers and gift cards." },
+      { tag: "Shipped", text: "An affiliate program, the cruise booking journey and accessibility tickets." },
     ],
     current: true,
   },
