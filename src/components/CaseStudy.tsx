@@ -1,5 +1,6 @@
 "use client";
 
+import { THUMB } from "@/data/placeholder";
 import { useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { gsap, SplitText, ScrollTrigger, prefersReducedMotion } from "@/lib/gsap";
@@ -96,7 +97,7 @@ export default function CaseStudy({ slug }: { slug: string }) {
       </section>
 
       <figure className="cs-cover">
-        <img src={p.cover} alt={`${p.name} mockups`} />
+        <img src={THUMB ?? p.cover} alt={`${p.name} mockup`} />
       </figure>
 
       <section className="cs-block cs-reveal">
@@ -160,7 +161,7 @@ export default function CaseStudy({ slug }: { slug: string }) {
           <span>Next case</span> {next.category}
         </span>
         <strong>{next.name}</strong>
-        <img src={next.cover} alt="" loading="lazy" />
+        <img src={THUMB ?? next.cover} alt="" loading="lazy" />
         <span className="cs-next-go">
           <Arrow />
         </span>

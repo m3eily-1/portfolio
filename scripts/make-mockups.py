@@ -88,11 +88,22 @@ def window(screen: Image.Image, width: int) -> Image.Image:
     return win
 
 
-def build(slug: str, W: int, H: int, suffix: str = ""):
-    kind, file, crop, name = PROJECTS[slug]
+SUPPLIED = ROOT / "mockup-src"  # Ahmed's own screens: mockup-src/<slug>.(png|jpg|jpeg|webp) win over the PDF crops
+
+
+def source(slug: str) -> Image.Image:
+    kind, file, crop, _ = PROJECTS[slug]
+    for ext in ("png", "jpg", "jpeg", "webp"):
+        f = SUPPLIED / f"{slug}.{ext}"
+        if f.exists():
+            return Image.open(f)
     src = Image.open(IMG / file)
-    if crop:
-        src = src.crop(crop)
+    return src.crop(crop) if crop else src
+
+
+def build(slug: str, W: int, H: int, suffix: str = ""):
+    kind, _, _, name = PROJECTS[slug]
+    src = source(slug)
     canvas = background(name, W, H)
     if kind == "phone":
         art, _ = phone(src, round(H * 0.8))

@@ -1,5 +1,6 @@
 "use client";
 
+import { THUMB } from "@/data/placeholder";
 import { useRef } from "react";
 import { gsap, prefersReducedMotion } from "@/lib/gsap";
 import { useGsap } from "@/components/career/useGsap";
@@ -43,7 +44,9 @@ export default function HowIWork() {
               <p className="hw-text">{s.text}</p>
             </div>
             {/* Placeholder: solid grey until the final images arrive (s.img keeps the old mockup path). */}
-            <figure className="hw-img is-ph" aria-hidden />
+            <figure className={`hw-img${THUMB ? "" : " is-ph"}`} aria-hidden>
+              {THUMB && <img src={THUMB} alt="" loading="lazy" />}
+            </figure>
           </li>
         ))}
       </ol>

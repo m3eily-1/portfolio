@@ -8,12 +8,13 @@ import { projects } from "@/data/work";
 import type { RingCard, RingScene } from "@/lib/ringScene";
 import { navigate } from "@/components/Transition";
 import HeroBg from "@/components/HeroBg";
+import { THUMB } from "@/data/placeholder";
 import { getLenis } from "@/lib/scroll";
 import { whenPreloaded } from "@/lib/preload";
 import Arrow from "@/components/Arrow";
 
 // One mockup per project, each linked to its case study.
-const CARDS: RingCard[] = projects.map((p) => ({ src: p.cover, slug: p.slug, label: `${p.name} — ${p.category}` }));
+const CARDS: RingCard[] = projects.map((p) => ({ src: THUMB ?? p.cover, slug: p.slug, label: `${p.name} — ${p.category}` }));
 // Set to a colour to show plain placeholder cards instead of the mockups.
 const RING_FILL: string | undefined = undefined;
 

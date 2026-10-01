@@ -1,5 +1,6 @@
 "use client";
 
+import { THUMB } from "@/data/placeholder";
 import { useRef, useState } from "react";
 import { gsap, prefersReducedMotion } from "@/lib/gsap";
 import { useGsap } from "@/components/career/useGsap";
@@ -43,7 +44,9 @@ export default function Services() {
       <div className="sv-l">
         <h2 className="sv-title">Expertise to ship quality products</h2>
         {/* Placeholder: solid grey until the final image arrives. */}
-        <figure className="sv-img is-ph" aria-hidden />
+        <figure className={`sv-img${THUMB ? "" : " is-ph"}`} aria-hidden>
+          {THUMB && <img src={THUMB} alt="" loading="lazy" />}
+        </figure>
         <p className="sv-blurb">Focused product design to help teams shape, improve and launch clearer, more consistent digital products.</p>
       </div>
       <div className="sv-r">
