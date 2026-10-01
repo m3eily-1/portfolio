@@ -10,7 +10,7 @@ const SWATCHES = [
   { name: "Ink", hex: "#12100E" },
   { name: "Bone", hex: "#EDE6DA" },
   { name: "Stone", hex: "#8A8175" },
-  { name: "Signal", hex: "#E4572E" },
+  { name: "Grey", hex: "#6F6A68" },
 ];
 
 

@@ -1,10 +1,10 @@
 /* Chapter 04 — career: a giant year rolls on the left while the roles pass on the right. Light (bone) like Chapter 03. */
 .cr { background: var(--bone); color: var(--ink); position: relative; }
 .cr .label { color: rgba(18, 17, 13, 0.55); }
-.cr .label span { color: var(--signal); }
+.cr .label span { color: var(--sun); }
 .cr-head { display: flex; flex-direction: column; gap: 14px; }
 .cr-title { font-family: var(--serif); font-weight: 400; font-size: clamp(3rem, 6vw, 6.4rem); line-height: 0.95; letter-spacing: -0.04em; }
-.cr-title em { color: var(--signal); }
+.cr-title em { color: var(--sun); }
 .cr-lede { font-size: 19px; line-height: 1.4; color: rgba(18, 17, 13, 0.7); max-width: 32ch; }
 
 /* ---------------------------------------------------------- D · Year counter */
@@ -12,7 +12,7 @@
 .yc-left { display: flex; flex-direction: column; justify-content: space-between; padding-bottom: 6svh; }
 .yc-logo { display: block; height: 30px; width: auto; max-width: 180px; object-fit: contain; object-position: left center; margin: 16px 0 4px; filter: grayscale(1); opacity: 0.6; transition: filter 0.4s, opacity 0.4s; }
 .yc-role.is-on .yc-logo { filter: none; opacity: 1; }
-.yc-year { display: flex; font-family: var(--serif); font-size: clamp(8rem, 22vw, 24rem); line-height: 1; letter-spacing: -0.05em; color: var(--signal); }
+.yc-year { display: flex; font-family: var(--serif); font-size: clamp(8rem, 22vw, 24rem); line-height: 1; letter-spacing: -0.05em; color: var(--sun); }
 .yc-col { display: block; height: 1em; overflow: hidden; }
 .yc-strip { display: flex; flex-direction: column; will-change: transform; }
 .yc-strip span { display: block; height: 1em; line-height: 1; text-align: center; }

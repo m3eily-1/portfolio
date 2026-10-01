@@ -26,7 +26,7 @@ function Silk() {
       void main(){vec2 uv=gl_FragCoord.xy/r;vec2 p=gl_FragCoord.xy/min(r.x,r.y)*2.4;
         float q=fbm(p+vec2(t*.05,t*.03)+m*.4);float k=fbm(p+q*1.8+vec2(-t*.04,t*.06));
         float glow=smoothstep(.25,.85,k)*(.35+uv.y*.75);vec3 col=mix(vec3(.07,.06,.05),vec3(1.,.83,.45),glow*.8);
-        col=mix(col,vec3(.9,.34,.18),smoothstep(.62,1.,k)*.25);gl_FragColor=vec4(col,glow*.9);}`;
+        col=mix(col,vec3(.57,.48,.31),smoothstep(.62,1.,k)*.25);gl_FragColor=vec4(col,glow*.9);}`;
     const sh = (type: number, src: string) => {
       const x = gl.createShader(type)!;
       gl.shaderSource(x, src);

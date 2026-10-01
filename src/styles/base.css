@@ -6,7 +6,6 @@
   --mute: rgba(237, 230, 218, 0.56);
   --line: rgba(237, 230, 218, 0.14);
   --sun: #917b50; /* primary = the reference label gold (same as --gold) */
-  --signal: #e4572e;
   --pad: 6vw;
   --serif: "Times New Roman", Times, serif;
   --sans: "Times New Roman", Times, serif; /* the reference sets body copy in Times too */
