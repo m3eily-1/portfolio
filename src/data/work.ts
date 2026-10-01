@@ -12,6 +12,8 @@ export type Project = {
   summary: string;
   overview: string;
   cover: string;
+  /** Final mockup supplied by Ahmed; wins over the placeholder and the generated cover. */
+  thumb?: string;
   images: string[];
   sections: Section[];
   impact?: { value: number; suffix: string; label: string; text: string }[];
@@ -30,6 +32,7 @@ export const projects: Project[] = [
     overview:
       "Sporting Clube de Braga's official mobile app and website, built on webook's white-label platform. Fans carry their tickets, follow matches live, read club news and book stadium tours, in Portuguese, English, Spanish, French and Arabic. The app launched on iOS and Android in July 2026.",
     cover: "/img/mockups/sc-braga.webp",
+    thumb: "/img/mockups/sc-braga-final.webp",
     images: ["/img/mockups/sc-braga.webp", "/img/scbraga/tickets.webp", "/img/scbraga/live.webp", "/img/scbraga/news.webp", "/img/scbraga/visit.webp"],
     sections: [
       {

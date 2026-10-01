@@ -1,6 +1,6 @@
 "use client";
 
-import { THUMB } from "@/data/placeholder";
+import { projectThumb } from "@/data/placeholder";
 import { useRef } from "react";
 import { useRouter } from "next/navigation";
 import { gsap, SplitText, prefersReducedMotion } from "@/lib/gsap";
@@ -76,7 +76,7 @@ export default function FeaturedWorks({ limit, all = false }: Props) {
                 }}
               >
                 <div className={`fw-img${PLACEHOLDER ? " is-ph" : ""}`}>
-                  {!PLACEHOLDER && <img src={THUMB ?? ((i + ci) % 2 ? p.cover.replace(/\.webp$/, "-tall.webp") : p.cover)} alt={`${p.name} mockup`} loading="lazy" />}
+                  {!PLACEHOLDER && <img src={projectThumb(p, (i + ci) % 2 === 1)} alt={`${p.name} mockup`} loading="lazy" />}
                 </div>
                 <div className="fw-meta">
                   <div>
