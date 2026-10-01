@@ -1,6 +1,6 @@
 :root {
-  --ink: #12110d;
-  --ink-2: #1b1815;
+  --ink: #000000; /* main background: black */
+  --ink-2: #0f0f0f;
   --bone: #ede6da;
   --paper: #f4efe6;
   --mute: rgba(237, 230, 218, 0.56);
@@ -66,7 +66,7 @@ em { font-style: italic; }
   position: fixed; inset: 0 0 auto 0; z-index: 50; display: grid; grid-template-columns: 1fr auto; align-items: center;
   padding: 12px max(20px, calc(50% - 580px)); font-size: 16px; line-height: 1.2; letter-spacing: -0.02em; /* 1160px bar, centred, like the reference */ transition: transform 0.6s var(--ease), background 0.5s, padding 0.5s var(--ease);
 }
-.hdr.is-solid { background: rgba(18, 16, 14, 0.72); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); padding-block: 0.9rem; }
+.hdr.is-solid { background: rgba(0, 0, 0, 0.72); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); padding-block: 0.9rem; }
 .hdr.is-hidden { transform: translateY(-110%); }
 .hdr-name { font-family: var(--serif); font-size: 1.9rem; line-height: 1; letter-spacing: -0.04em; }
 .hdr-name { display: flex; align-items: center; }

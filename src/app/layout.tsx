@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "Product Design Lead at webook, Riyadh, designing delightful, AI-powered products. The story of a designer who went from graphic design to code to product design, and 40+ products along the way.",
 };
 
-export const viewport: Viewport = { width: "device-width", initialScale: 1, viewportFit: "cover", themeColor: "#12100e" };
+export const viewport: Viewport = { width: "device-width", initialScale: 1, viewportFit: "cover", themeColor: "#000000" };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const fonts = [mono, pixel, script].map((f) => f.variable).join(" ");

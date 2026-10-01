@@ -15,8 +15,8 @@
 .ch-beat.is-on { opacity: 1; }
 .ch-beat b { font-family: var(--mono); font-weight: 400; font-size: 0.72rem; color: var(--sun); padding-top: 0.2rem; }
 
-.ch--pixels { background: #161412; }
-.ch--logic { background: #0d0e11; }
+.ch--pixels { background: var(--ink); }
+.ch--logic { background: var(--ink); }
 .ch--products { background: var(--bone); color: var(--ink); }
 .ch--products .label { color: rgba(18, 16, 14, 0.55); }
 .ch--products .label span, .ch--products .ch-beat b { color: var(--sun); }
