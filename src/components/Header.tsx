@@ -10,7 +10,7 @@ import Arrow from "@/components/Arrow";
 
 // Header is logo + Menu on every screen size; the links live in the overlay.
 const MENU: { id: string; label: string; route?: string }[] = [
-  { id: "story", label: "Story", route: "/story" },
+  { id: "story", label: "Story" },
   { id: "work", label: "Work" },
   // { id: "delight", label: "Delight" }, // section hidden for now
   { id: "services", label: "Services" },
@@ -71,7 +71,7 @@ export default function Header() {
   }, []);
 
   const go = (id: string, route?: string) => {
-    // A page of its own (the story): travel there, or back to its top if already on it.
+    // A page of its own: travel there, or back to its top if already on it.
     if (route) return path === route ? getLenis()?.scrollTo(0, { duration: 1.6 }) : navigate(router, route);
     // A section on this page scrolls in place; otherwise go home and land on it.
     if (document.getElementById(id)) return getLenis()?.scrollTo(`#${id}`, { duration: 1.8 });

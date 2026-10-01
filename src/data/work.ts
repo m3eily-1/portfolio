@@ -311,6 +311,7 @@ export const projects: Project[] = [
     overview:
       "BONA is the first zero-commission neo-brokerage and robo-advisor in Africa: a one-stop investment shop for digital millennials and Gen Z, with 3,000+ US securities from a $1 minimum, local payment gateways and local ID.",
     cover: "/img/mockups/bona.webp",
+    thumb: "/img/mockups/bona-final.webp",
     images: ["/img/mockups/bona.webp", "/img/bona-1.webp", "/img/bona-2.webp"],
     sections: [
       {
