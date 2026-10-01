@@ -68,7 +68,7 @@ export default function FeaturedWorks({ limit, all = false }: Props) {
               <a
                 key={p.slug}
                 href={withBase(`/work/${p.slug}`)}
-                className={`fw-card${(i + ci) % 2 ? " is-tall" : ""}`}
+                className={`fw-card${p.desktop ? " is-square" : (i + ci) % 2 ? " is-tall" : ""}`}
                 data-cursor="View"
                 onClick={(e) => {
                   e.preventDefault();
@@ -76,7 +76,7 @@ export default function FeaturedWorks({ limit, all = false }: Props) {
                 }}
               >
                 <div className={`fw-img${PLACEHOLDER ? " is-ph" : ""}`}>
-                  {!PLACEHOLDER && <img src={projectThumb(p, (i + ci) % 2 === 1)} alt={`${p.name} mockup`} loading="lazy" />}
+                  {!PLACEHOLDER && <img src={projectThumb(p, !p.desktop && (i + ci) % 2 === 1)} alt={`${p.name} mockup`} loading="lazy" />}
                 </div>
                 <div className="fw-meta">
                   <div>

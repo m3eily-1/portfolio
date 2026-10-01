@@ -16,6 +16,8 @@ export type Project = {
   cover: string;
   /** Final mockup supplied by Ahmed; wins over the placeholder and the generated cover. */
   thumb?: string;
+  /** Desktop/web projects get square cards so their laptop mockups aren't cropped. */
+  desktop?: boolean;
   images: string[];
   sections: Section[];
   impact?: { value: number; suffix: string; label: string; text: string }[];
@@ -160,6 +162,7 @@ export const projects: Project[] = [
   // The stc design system and the Demand Committee voting app, merged into one stc case study (Ahmed, 2026-10-01).
   {
     slug: "stc",
+    desktop: true,
     name: "stc",
     client: "stc",
     category: "Design system & voting app",
@@ -200,6 +203,7 @@ export const projects: Project[] = [
   },
   {
     slug: "ejar",
+    desktop: true,
     name: "Ejar",
     category: "Rental portal",
     duration: "2 years",
@@ -348,6 +352,7 @@ export const projects: Project[] = [
   },
   {
     slug: "check",
+    desktop: true,
     name: "Check",
     category: "Operations portal",
     duration: "7 weeks",
@@ -372,6 +377,7 @@ export const projects: Project[] = [
   },
   {
     slug: "egyptian-streets",
+    desktop: true,
     name: "Egyptian Streets",
     category: "News",
     duration: "3 weeks",
