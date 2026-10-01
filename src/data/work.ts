@@ -44,6 +44,27 @@ export const projects: Project[] = [
         items: [],
       },
       {
+        title: "Homepage audit",
+        items: [
+          { text: "The above-the-fold area is overcrowded with competing elements (hero banners, upcoming games, standings, tour/FAP), which increases cognitive load and makes it hard to know where to focus first." },
+          { text: "Primary banners are hard to navigate: the interaction for switching between them is neither discoverable nor intuitive." },
+          { text: "Upcoming-games navigation is hard to use: very small tap areas overlap the background, reducing tap accuracy, especially on mobile." },
+          { text: "The “Learn more” action lacks clear affordance, so it isn’t obvious that it’s clickable." },
+          { text: "Scrolling within the standings section isn’t intuitive, adding friction when users explore more content." },
+          { text: "Side-menu icons lack clarity and recognizability, which hurts wayfinding and steepens the learning curve for first-time users." },
+          { text: "The hero banner competes with the secondary content on the right, weakening the hierarchy and diluting the primary message." },
+          { text: "Match info exists, but its urgency isn’t emphasized." },
+          { text: "Live and upcoming match indicators are visually weak." },
+          { text: "Sports fans expect a match-first layout." },
+          { text: "News dominates over fixtures." },
+          { text: "External redirects (tickets, store) reset the user’s context." },
+          { text: "There is no unified back navigation." },
+          { text: "There is no dominant primary action." },
+          { text: "The CTA’s default state looks like its disabled state." },
+          { text: "It works as an informative website rather than a task-led product." },
+        ],
+      },
+      {
         title: "Main UX issues",
         items: [
           { head: "Visual hierarchy breakdown", text: "Multiple elements compete for attention with equal visual weight, violating hierarchy and focus principles." },
