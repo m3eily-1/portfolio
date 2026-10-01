@@ -18,6 +18,37 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  // Not from the PDF: webook's white-label build for SC Braga (screens from Test/scbraga-app-landing).
+  {
+    slug: "sc-braga",
+    name: "SC Braga",
+    client: "SC Braga",
+    category: "White-label app & website",
+    duration: "2026",
+    summary: "The club's official app and website, on webook's white-label platform.",
+    overview:
+      "Sporting Clube de Braga's official mobile app and website, built on webook's white-label platform. Fans carry their tickets, follow matches live, read club news and book stadium tours, in Portuguese, English, Spanish, French and Arabic. The app launched on iOS and Android in July 2026.",
+    cover: "/img/scbraga/cover.webp",
+    images: ["/img/scbraga/tickets.webp", "/img/scbraga/live.webp", "/img/scbraga/news.webp", "/img/scbraga/visit.webp"],
+    sections: [
+      {
+        title: "Inside the app",
+        items: [
+          { head: "Tickets", text: "Digital tickets with QR entry, gate, block, row and seat, parking details, and one tap to send a ticket to a friend." },
+          { head: "Live matchday", text: "Live score, line-ups, statistics and minute-by-minute commentary, with news and videos in the same match view." },
+          { head: "News", text: "Club news and interviews in an editorial layout set in the club's own typeface." },
+          { head: "Visits", text: "Stadium tours booked in the app, with the story and gallery of the Braga Municipal Stadium." },
+        ],
+      },
+      {
+        title: "One platform",
+        items: [
+          { text: "The same white-label product powers both the app and scbraga.pt, themed to the club's crest, colours and type." },
+        ],
+      },
+    ],
+    link: { label: "scbraga.pt", href: "https://scbraga.pt" },
+  },
   {
     slug: "stc-design-system",
     name: "stc Design System",
