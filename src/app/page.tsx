@@ -13,6 +13,8 @@ import Delight from "@/components/Delight";
 
 // Delight section hidden for now (Ahmed, 2026-09-30); flip to true to bring it back.
 const SHOW_DELIGHT = false;
+// How I work hidden for now (Ahmed, 2026-10-01); flip to true to bring it back.
+const SHOW_PROCESS = false;
 import HowIWork from "@/components/HowIWork";
 import Voices from "@/components/Voices";
 import Contact from "@/components/Contact";
@@ -38,7 +40,7 @@ export default function Home() {
         <AiSection />
         {SHOW_DELIGHT && <Delight />}
         <Services />
-        <HowIWork />
+        {SHOW_PROCESS && <HowIWork />}
         <Voices />
         <Contact />
       </main>

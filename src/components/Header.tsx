@@ -14,7 +14,7 @@ const MENU: { id: string; label: string; route?: string }[] = [
   { id: "work", label: "Work" },
   // { id: "delight", label: "Delight" }, // section hidden for now
   { id: "services", label: "Services" },
-  { id: "process", label: "Process" },
+  // { id: "process", label: "Process" }, // section hidden for now
   { id: "contact", label: "Contact" },
 ];
 
