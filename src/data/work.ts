@@ -233,6 +233,7 @@ export const projects: Project[] = [
     overview:
       "A mobile app that empowers Orange users with streamlined management of subscriptions, bill payments, recharges and more. The goal: raise engagement and satisfaction, and build a design system to keep the app consistent.",
     cover: "/img/mockups/my-orange.webp",
+    thumb: "/img/mockups/my-orange-final.webp",
     images: ["/img/mockups/my-orange.webp", "/img/orange-1.webp", "/img/orange-2.webp", "/img/orange-3.webp"],
     sections: [
       {
