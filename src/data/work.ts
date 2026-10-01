@@ -335,6 +335,7 @@ export const projects: Project[] = [
     overview:
       "Otida is a complete solution for managing diabetes: a health-tech app with an innovative, efficient care model. Its multidisciplinary approach focuses on reversing and preventing complications.",
     cover: "/img/mockups/otida.webp",
+    thumb: "/img/mockups/otida-final.webp",
     images: ["/img/mockups/otida.webp", "/img/otida-1.webp", "/img/otida-2.webp"],
     sections: [
       {
