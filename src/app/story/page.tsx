@@ -8,6 +8,9 @@ import CareerCounter from "@/components/career/CareerCounter";
 import Beyond from "@/components/Beyond";
 import Contact from "@/components/Contact";
 import PageReady from "@/components/PageReady";
+
+// Off-screen (Beyond) section hidden for now (Ahmed, 2026-10-01); flip to true to bring it back.
+const SHOW_OFFSCREEN = false;
 import "@/styles/home.css";
 import "@/styles/chapters.css";
 import "@/styles/career.css";
@@ -28,7 +31,7 @@ export default function StoryPage() {
         <ChapterLogic />
         <ChapterProducts />
         <CareerCounter />
-        <Beyond />
+        {SHOW_OFFSCREEN && <Beyond />}
         <Contact />
       </main>
       <PageReady />
