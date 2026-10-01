@@ -1,6 +1,5 @@
 "use client";
 
-import { THUMB } from "@/data/placeholder";
 import { useRef } from "react";
 import { gsap, prefersReducedMotion } from "@/lib/gsap";
 import { useGsap } from "@/components/career/useGsap";
@@ -21,9 +20,7 @@ export default function HowIWork() {
       gsap
         .timeline({ scrollTrigger: { trigger: s, start: "top 75%" } })
         .from(s.querySelector(".hw-rule"), { scaleX: 0, transformOrigin: "left", duration: 1.4, ease: "expo.inOut" })
-        .from(s.querySelectorAll(".hw-n, .hw-title, .hw-text"), { y: 40, autoAlpha: 0, stagger: 0.08, duration: 1.1 }, 0.2)
-        .fromTo(s.querySelector(".hw-img"), { clipPath: "inset(0 0 100% 0)" }, { clipPath: "inset(0 0 0% 0)", duration: 1.4, ease: "expo.inOut" }, 0.15);
-      gsap.fromTo(s.querySelector(".hw-img img"), { yPercent: -6 }, { yPercent: 6, ease: "none", scrollTrigger: { trigger: s, start: "top bottom", end: "bottom top", scrub: true } });
+        .from(s.querySelectorAll(".hw-n, .hw-title, .hw-text"), { y: 40, autoAlpha: 0, stagger: 0.08, duration: 1.1 }, 0.2);
     });
   });
   return (
@@ -43,10 +40,7 @@ export default function HowIWork() {
               <h3 className="hw-title">{s.title}</h3>
               <p className="hw-text">{s.text}</p>
             </div>
-            {/* Placeholder: solid grey until the final images arrive (s.img keeps the old mockup path). */}
-            <figure className={`hw-img${THUMB ? "" : " is-ph"}`} aria-hidden>
-              {THUMB && <img src={THUMB} alt="" loading="lazy" />}
-            </figure>
+            {/* Step images hidden until Ahmed supplies them (s.img keeps the old mockup path). */}
           </li>
         ))}
       </ol>
