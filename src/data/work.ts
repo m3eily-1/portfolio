@@ -1,7 +1,7 @@
 // Case studies from the PDF (pages 9–26). Copy is tightened; facts are unchanged.
 
 // Covers are the consistent mockups from scripts/make-mockups.py; images[1..] are the original PDF mockups (case-study gallery).
-export type Section = { title: string; items: { head?: string; text: string }[] };
+export type Section = { title: string; intro?: string; items: { head?: string; text: string }[] };
 
 export type Project = {
   slug: string;
@@ -11,6 +11,8 @@ export type Project = {
   duration: string;
   summary: string;
   overview: string;
+  /** Heading for the overview block (defaults to "Overview"). */
+  overviewTitle?: string;
   cover: string;
   /** Final mockup supplied by Ahmed; wins over the placeholder and the generated cover. */
   thumb?: string;
@@ -29,12 +31,38 @@ export const projects: Project[] = [
     category: "White-label app & website",
     duration: "2026",
     summary: "The club's official app and website, on webook's white-label platform.",
+    overviewTitle: "Our design approach",
     overview:
-      "Sporting Clube de Braga's official mobile app and website, built on webook's white-label platform. Fans carry their tickets, follow matches live, read club news and book stadium tours, in Portuguese, English, Spanish, French and Arabic. The app launched on iOS and Android in July 2026.",
+      "We follow a structured, user-centered process to ensure a modern, intuitive and scalable digital experience for SC Braga fans, while aligning with business goals and technical constraints.",
     cover: "/img/mockups/sc-braga.webp",
     thumb: "/img/mockups/sc-braga-final.webp",
     images: ["/img/mockups/sc-braga.webp", "/img/scbraga/tickets.webp", "/img/scbraga/live.webp", "/img/scbraga/news.webp", "/img/scbraga/visit.webp"],
     sections: [
+      {
+        title: "Old version audit",
+        intro: "We evaluated the current experience across usability, navigation, content hierarchy and interaction clarity to identify the key weak points to fix.",
+        items: [],
+      },
+      {
+        title: "Main UX issues",
+        items: [
+          { head: "Visual hierarchy breakdown", text: "Multiple elements compete for attention with equal visual weight, violating hierarchy and focus principles." },
+          { head: "Weak CTA salience", text: "Key actions (Tickets, Shop, Membership) are not visually dominant. This breaks CTA and conversion patterns and reduces action discoverability." },
+          { head: "IA–mental model mismatch", text: "The menu structure reflects internal organization, not user tasks. It conflicts with Jakob’s Law and recognition-based navigation patterns." },
+          { head: "Content-first vs task-first", text: "The website favors content exposure over primary user goals. It lacks task-focused design and clear conversion paths." },
+        ],
+      },
+      {
+        title: "Benchmarking",
+        intro: "We analyzed top-tier clubs (FC Barcelona, Manchester United, Liverpool, Juventus, AC Milan, Inter Milan, Paris Saint-Germain, Bayern Munich, Manchester City, Real Madrid and more) to identify the “Braga Edge.”",
+        items: [],
+      },
+      {
+        title: "What we did",
+        items: [
+          { head: "New information architecture", text: "We restructured pages and features using a user-centered approach and card-sorting workshops to create clearer navigation and IA, helping users find information and complete tasks more efficiently." },
+        ],
+      },
       {
         title: "Inside the app",
         items: [
@@ -47,7 +75,7 @@ export const projects: Project[] = [
       {
         title: "One platform",
         items: [
-          { text: "The same white-label product powers both the app and scbraga.pt, themed to the club's crest, colours and type." },
+          { text: "The same white-label product powers both the app and scbraga.pt, themed to the club's crest, colours and type. The app has been live on iOS and Android since July 2026, in Portuguese, English, Spanish, French and Arabic." },
         ],
       },
     ],

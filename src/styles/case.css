@@ -10,6 +10,8 @@
 .cs-block { display: grid; grid-template-columns: minmax(0, 0.42fr) minmax(0, 1fr); gap: 4vw; padding: 14svh var(--pad) 0; align-items: start; }
 .cs-sticky { position: sticky; top: 7rem; }
 .cs-overview { font-family: var(--serif); font-weight: 400; font-size: clamp(1.7rem, 3vw, 3.2rem); line-height: 1.15; letter-spacing: -0.01em; }
+.cs-body { display: flex; flex-direction: column; gap: 2.4rem; }
+.cs-intro { font-family: var(--serif); font-weight: 400; font-size: clamp(1.4rem, 2.2vw, 2.2rem); line-height: 1.2; letter-spacing: -0.01em; max-width: 34ch; }
 .cs-items { border-top: 1px solid var(--line); }
 .cs-items li { display: grid; grid-template-columns: 3.4rem 1fr; gap: 1rem; padding: 1.6rem 0; border-bottom: 1px solid var(--line); }
 .cs-items b { font-family: var(--mono); font-weight: 400; font-size: 0.72rem; color: var(--sun); padding-top: 0.45rem; }

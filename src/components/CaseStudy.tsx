@@ -102,7 +102,7 @@ export default function CaseStudy({ slug }: { slug: string }) {
 
       <section className="cs-block cs-reveal">
         <p className="label">
-          <span>01</span> Overview
+          <span>01</span> {p.overviewTitle ?? "Overview"}
         </p>
         <p className="cs-overview">{p.overview}</p>
       </section>
@@ -112,6 +112,9 @@ export default function CaseStudy({ slug }: { slug: string }) {
           <p className="label cs-sticky">
             <span>{String(si + 2).padStart(2, "0")}</span> {s.title}
           </p>
+          <div className="cs-body">
+          {s.intro && <p className="cs-intro cs-reveal">{s.intro}</p>}
+          {s.items.length > 0 && (
           <ol className="cs-items">
             {s.items.map((it, i) => (
               <li key={i} className="cs-reveal">
@@ -123,6 +126,8 @@ export default function CaseStudy({ slug }: { slug: string }) {
               </li>
             ))}
           </ol>
+          )}
+          </div>
         </section>
       ))}
 
