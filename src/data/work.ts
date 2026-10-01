@@ -265,6 +265,7 @@ export const projects: Project[] = [
     overview:
       "A car-rental app for booking at any Budget location in KSA, with handy extras like GPS, mobile Wi-Fi and child seats added right in the booking.",
     cover: "/img/mockups/budget.webp",
+    thumb: "/img/mockups/budget-final.webp",
     images: ["/img/mockups/budget.webp", "/img/budget-1.webp", "/img/budget-2.webp"],
     sections: [
       {
