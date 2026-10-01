@@ -36,9 +36,6 @@ export default function CaseStudy({ slug }: { slug: string }) {
           gsap.utils.toArray<HTMLElement>(".cs-reveal").forEach((r) =>
             gsap.from(r, { y: 50, autoAlpha: 0, duration: 1.2, scrollTrigger: { trigger: r, start: "top 86%" } }),
           );
-          gsap.utils.toArray<HTMLElement>(".cs-gal figure").forEach((f) =>
-            gsap.fromTo(f, { clipPath: "inset(12% 12% 12% 12%)" }, { clipPath: "inset(0% 0% 0% 0%)", ease: "none", scrollTrigger: { trigger: f, start: "top 95%", end: "top 35%", scrub: true } }),
-          );
         }
         gsap.utils.toArray<HTMLElement>(".cs-impact b").forEach((b) => {
           const o = { v: reduced ? Number(b.dataset.to) : 0 };
@@ -151,22 +148,12 @@ export default function CaseStudy({ slug }: { slug: string }) {
         </section>
       )}
 
-      {p.images.length > 1 && (
-        <section className="cs-gal">
-          {p.images.slice(1).map((src) => (
-            <figure key={src}>
-              <img src={src} alt="" loading="lazy" />
-            </figure>
-          ))}
-        </section>
-      )}
 
       <a className="cs-next" href={withBase(`/work/${next.slug}`)} onClick={go(`/work/${next.slug}`)} data-cursor="Next">
         <span className="label">
           <span>Next case</span> {next.category}
         </span>
         <strong>{next.name}</strong>
-        <img src={projectThumb(next)} alt="" loading="lazy" />
         <span className="cs-next-go">
           <Arrow />
         </span>

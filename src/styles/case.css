@@ -26,15 +26,9 @@
 .cs-impact strong { font-family: var(--serif); font-weight: 400; font-size: clamp(4rem, 8vw, 8.5rem); line-height: 0.9; }
 .cs-impact h3 { font-weight: 600; margin: 0.8rem 0 0.3rem; }
 .cs-impact p { color: rgba(18, 16, 14, 0.7); max-width: 30ch; }
-.cs-gal { display: flex; flex-direction: column; gap: 3vw; padding: 16svh var(--pad) 0; }
-.cs-gal figure { margin: 0; width: 100%; max-width: 900px; overflow: hidden; aspect-ratio: 1.49; background: var(--ink-2); }
-.cs-gal figure:nth-child(even) { width: 72%; max-width: 640px; margin-left: auto; }
-.cs-gal img { width: 100%; height: 100%; object-fit: cover; }
 .cs-next { position: relative; display: flex; flex-direction: column; gap: 1rem; margin: 20svh var(--pad) 0; padding: 3rem 0 4rem; border-top: 1px solid var(--line); overflow: hidden; }
 .cs-next strong { font-family: var(--serif); font-weight: 400; font-size: clamp(3.4rem, 11vw, 12rem); line-height: 0.9; letter-spacing: -0.03em; transition: transform 0.8s var(--ease), color 0.4s; position: relative; z-index: 1; }
 .cs-next:hover strong { transform: translateX(2vw); color: var(--sun); font-style: italic; }
-.cs-next img { position: absolute; right: 0; top: 50%; width: 28vw; aspect-ratio: 1.49; object-fit: cover; transform: translateY(-40%) scale(0.85); opacity: 0; transition: opacity 0.6s, transform 0.8s var(--ease); }
-.cs-next:hover img { opacity: 1; transform: translateY(-50%) scale(1); }
 .cs-next-go { position: absolute; right: 0; top: 3rem; width: 48px; height: 48px; display: grid; place-items: center; border: 1px solid var(--line); z-index: 1; }
 .cs-foot { display: flex; justify-content: space-between; padding: 1.4rem var(--pad) 2rem; font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mute); border-top: 1px solid var(--line); }
 .cs-foot a:hover { color: var(--bone); }
@@ -43,7 +37,5 @@
   .cs-sticky { position: static; }
   .cs-impact { padding: 1.6rem; }
   .cs-impact-grid { grid-template-columns: 1fr; }
-  .cs-gal figure:nth-child(even) { width: 100%; }
-  .cs-next img { display: none; }
 }
 :is(.cs-name, .cs-next strong) { letter-spacing: -0.04em; }
