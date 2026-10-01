@@ -22,6 +22,20 @@ export type Project = {
   link?: { label: string; href: string };
 };
 
+// Company context shared by every case study done there (Ahmed's own words).
+const STC_ROLE: Section = {
+  title: "About stc & my role",
+  intro:
+    "stc is a leading telecommunications company based in Saudi Arabia, with a strong commitment to digital transformation and innovation, evident in the exceptional digital experiences its apps deliver.",
+  items: [
+    { text: "Translating ideas and business requirements into mind maps, user flows, low- and high-fidelity wireframes, and prototypes." },
+    { text: "Evaluating UX using heuristic evaluation and UX laws." },
+    { text: "Collaborating with team members to ideate and achieve the best user experience." },
+    { text: "Creating design systems." },
+    { text: "Communicating design ideas and prototypes to developers." },
+  ],
+};
+
 export const projects: Project[] = [
   // Not from the PDF: webook's white-label build for SC Braga (screens from Test/scbraga-app-landing).
   {
@@ -109,12 +123,24 @@ export const projects: Project[] = [
     client: "webook",
     category: "Ticketing & entertainment platform",
     duration: "2024 – now",
-    summary: "Seven product features across webook's ticketing and entertainment platform.",
+    summary: "Booking journeys, new features and the design system for an all-in-one events platform.",
+    overviewTitle: "The platform",
     overview:
-      "As Product Design Lead at webook, I designed features across the platform, from signing in and paying to booking whole journeys: social login, subscriptions, cashless, vouchers and gift cards, an affiliate program, the cruise booking journey and accessibility tickets.",
+      "webook.com is an all-in-one social engagement platform for booking experiences and online tickets for the most interesting events and activities.",
     cover: "/img/placeholder-phone.webp",
     images: ["/img/placeholder-phone.webp"],
     sections: [
+      {
+        title: "My role",
+        items: [
+          { text: "Enhanced the core ticket booking journey, improving usability and increasing conversion rates." },
+          { text: "Conducted UX audits and tests to identify friction points, and implemented design solutions that improved user satisfaction." },
+          { text: "Designed new features end to end, collaborating closely with product managers and developers to ensure feasibility and user value." },
+          { text: "Created and maintained scalable components in the webook design system, enabling faster development and better consistency across platforms." },
+          { text: "Designed white- and grey-label landing pages tailored to the business needs of high-profile partners and entertainment brands." },
+          { text: "Communicated design concepts, user flows and interactions to developers for a seamless handoff and implementation." },
+        ],
+      },
       {
         title: "Features I designed",
         items: [
@@ -142,6 +168,7 @@ export const projects: Project[] = [
     cover: "/img/mockups/stc-design-system.webp",
     images: ["/img/mockups/stc-design-system.webp", "/img/stc-ds-1.webp"],
     sections: [
+      STC_ROLE,
       {
         title: "Design process",
         items: [
@@ -169,6 +196,7 @@ export const projects: Project[] = [
     cover: "/img/mockups/stc-voting.webp",
     images: ["/img/mockups/stc-voting.webp", "/img/stc-voting.webp"],
     sections: [
+      STC_ROLE,
       {
         title: "What it does",
         items: [

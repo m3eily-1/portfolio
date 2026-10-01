@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import { gsap, prefersReducedMotion } from "@/lib/gsap";
 
-const ITEMS = [
+const ITEMS: { img: string; kicker: string; title: string; text: string; points?: string[] }[] = [
   {
     img: "/img/techne.webp",
     kicker: "Speaker · Cairo",
@@ -14,7 +14,14 @@ const ITEMS = [
     img: "/img/uxcamp-1.webp",
     kicker: "Mentor · 2 batches",
     title: "Tremoloo UX Camp",
-    text: "Guided participants through UX practice: best practices, group critiques, one-on-one coaching and feedback on their work.",
+    text: "I mentored two batches of Tremoloo's UX Camp.",
+    points: [
+      "Guided participants in learning and practising UX design skills.",
+      "Taught industry best practices and standards from my own experience.",
+      "Led group discussions and activities to promote collaboration and teamwork.",
+      "Offered one-on-one coaching on individual challenges and learning goals.",
+      "Gave feedback on participants' work and helped them plan how to improve.",
+    ],
   },
 ];
 
@@ -52,6 +59,13 @@ export default function Beyond() {
             <p className="by-kicker">{it.kicker}</p>
             <h3>{it.title}</h3>
             <p>{it.text}</p>
+            {it.points && (
+              <ul className="by-points">
+                {it.points.map((pt) => (
+                  <li key={pt}>{pt}</li>
+                ))}
+              </ul>
+            )}
           </div>
         </article>
       ))}

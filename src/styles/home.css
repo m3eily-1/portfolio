@@ -90,6 +90,9 @@
 /* ================================================================ beyond */
 .by { padding: 16svh var(--pad) 6svh; }
 .by-head { display: flex; flex-direction: column; gap: 1.2rem; margin-bottom: 10svh; }
+.by-points { display: flex; flex-direction: column; gap: 8px; margin-top: 4px; color: var(--mute); font-size: 16px; line-height: 1.45; }
+.by-points li { padding-left: 18px; position: relative; }
+.by-points li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 6px; height: 6px; background: var(--sun); }
 .by-title { font-family: var(--serif); font-weight: 400; font-size: clamp(2.6rem, 6vw, 6.4rem); line-height: 0.95; letter-spacing: -0.02em; }
 .by-title em { color: var(--sun); }
 .by-item { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 5vw; align-items: center; margin-bottom: 14svh; }
