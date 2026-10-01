@@ -157,26 +157,38 @@ export const projects: Project[] = [
     ],
     link: { label: "webook.com", href: "https://webook.com" },
   },
+  // The stc design system and the Demand Committee voting app, merged into one stc case study (Ahmed, 2026-10-01).
   {
-    slug: "stc-design-system",
-    name: "stc Design System",
+    slug: "stc",
+    name: "stc",
     client: "stc",
-    category: "Design system",
-    duration: "1 year",
-    summary: "One system for every stc internal platform.",
+    category: "Design system & voting app",
+    duration: "2023 – 2024",
+    summary: "One design system for every stc internal platform, and a secure voting app for its Demand Committee.",
     overview:
-      "The journey began with a detailed exploration of stc's current solutions. Evaluating function after function surfaced one common issue: a lack of design consistency that was fragmenting the user experience.",
+      "Two projects at stc: a design system that brought consistency to the company's internal platforms, and Demand Committee, a secure voting app for committees and events.",
     cover: "/img/mockups/stc-design-system.webp",
     thumb: "/img/mockups/stc-design-system-final.webp",
-    images: ["/img/mockups/stc-design-system.webp", "/img/stc-ds-1.webp"],
+    images: ["/img/mockups/stc-design-system-final.webp", "/img/mockups/stc-voting-final.webp", "/img/stc-ds-1.webp", "/img/stc-voting.webp"],
     sections: [
       STC_ROLE,
       {
-        title: "Design process",
+        title: "Design system",
+        intro:
+          "The journey began with a detailed exploration of stc's current solutions. Evaluating function after function surfaced one common issue: a lack of design consistency that was fragmenting the user experience.",
         items: [
           { text: "Defined the core of the system: typography, colour, UI components and interaction patterns." },
           { text: "Built a comprehensive library of reusable assets and components in Figma." },
           { text: "Delivered the system to development teams through workshops, with ongoing support during implementation." },
+        ],
+      },
+      {
+        title: "Demand Committee voting app",
+        intro:
+          "A voting app that protects the security and integrity of voting in events such as GSS and project reviews. It offers a secure, compliant experience and integrates with Hub Inbox, SMS and Outlook Calendar.",
+        items: [
+          { head: "Secure by design", text: "Every vote is protected end-to-end and fully compliant." },
+          { head: "Where people already are", text: "Invitations and results flow through Hub Inbox, SMS and Outlook Calendar." },
         ],
       },
     ],
@@ -184,28 +196,6 @@ export const projects: Project[] = [
       { value: 30, suffix: "%", label: "Design consistency", text: "fewer design inconsistencies across all platforms." },
       { value: 20, suffix: "%", label: "Development efficiency", text: "less development time, with ready-to-use components and styles." },
       { value: 15, suffix: "%", label: "User satisfaction", text: "more positive feedback on the improved interface in user testing." },
-    ],
-  },
-  {
-    slug: "stc-voting",
-    name: "Demand Committee",
-    client: "stc",
-    category: "Voting app",
-    duration: "3 weeks",
-    summary: "Secure, compliant voting for committees and events.",
-    overview:
-      "A voting app that protects the security and integrity of voting in events such as GSS and project reviews. It offers a secure, compliant experience and integrates with Hub Inbox, SMS and Outlook Calendar.",
-    cover: "/img/mockups/stc-voting.webp",
-    images: ["/img/mockups/stc-voting.webp", "/img/stc-voting.webp"],
-    sections: [
-      STC_ROLE,
-      {
-        title: "What it does",
-        items: [
-          { head: "Secure by design", text: "Every vote is protected end-to-end and fully compliant." },
-          { head: "Where people already are", text: "Invitations and results flow through Hub Inbox, SMS and Outlook Calendar." },
-        ],
-      },
     ],
   },
   {
