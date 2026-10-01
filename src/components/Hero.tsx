@@ -9,6 +9,7 @@ import type { RingCard, RingScene } from "@/lib/ringScene";
 import { navigate } from "@/components/Transition";
 import HeroBg from "@/components/HeroBg";
 import { getLenis } from "@/lib/scroll";
+import { whenPreloaded } from "@/lib/preload";
 import Arrow from "@/components/Arrow";
 
 // Every mockup in the PDF, each linked to its case study.
@@ -28,14 +29,17 @@ export default function Hero() {
     let scene: RingScene | null = null;
     let alive = true;
     let lastScroll = window.scrollY;
-    import("@/lib/ringScene").then(({ createRingScene }) => {
-      if (!alive || !canvas.current) return;
-      scene = createRingScene(canvas.current, CARDS, {
-        onHover: setHover,
-        onSelect: (c) => navigate(router, `/work/${c.slug}`),
-        fill: RING_FILL,
-      });
-    });
+    // The ring spins in as the preloader hands over.
+    import("@/lib/ringScene").then(({ createRingScene }) =>
+      whenPreloaded(() => {
+        if (!alive || !canvas.current) return;
+        scene = createRingScene(canvas.current, CARDS, {
+          onHover: setHover,
+          onSelect: (c) => navigate(router, `/work/${c.slug}`),
+          fill: RING_FILL,
+        });
+      }),
+    );
     // Scrolling spins the ring a little faster.
     const onScroll = () => {
       const v = window.scrollY - lastScroll;
@@ -75,8 +79,10 @@ export default function Hero() {
       ctx = gsap.context(() => {
         if (prefersReducedMotion()) return;
         const title = new SplitText(".hero-title", { type: "lines", mask: "lines", linesClass: "hero-line" });
-        gsap
-          .timeline({ defaults: { ease: "expo.out" }, delay: 0.15 })
+        // Starts once the preloader hands over (immediately on client-side navigations).
+        const intro = gsap.timeline({ defaults: { ease: "expo.out" }, paused: true });
+        whenPreloaded(() => intro.play());
+        intro
           .from(".hero-portrait-in", { yPercent: 14, autoAlpha: 0, duration: 2 }, 0.25)
           .from(".hero-hi", { autoAlpha: 0, y: 14, duration: 1 }, 0.9)
           .from(title.lines, { yPercent: 140, stagger: 0.12, duration: 1.4 }, 0.95)

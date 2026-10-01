@@ -24,12 +24,15 @@ export default function Header() {
   const path = usePathname();
   const menu = useRef<HTMLDivElement>(null);
   const [open, setOpen] = useState(false);
+  const opened = useRef(false);
 
   // Menu: lock the page, reveal the panel top-down, stagger the links in.
   useEffect(() => {
     const el = menu.current;
     if (!el) return;
-    lockScroll(open);
+    // Only touch the scroll lock once the menu has been used, so mounting never undoes the preloader's lock.
+    if (open) opened.current = true;
+    if (opened.current) lockScroll(open);
     root.current?.classList.toggle("is-menu", open);
     if (prefersReducedMotion()) {
       gsap.set(el, { autoAlpha: open ? 1 : 0 });

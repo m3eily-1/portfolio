@@ -3,6 +3,7 @@ import { Geist_Mono, Pixelify_Sans, Mrs_Saint_Delafield } from "next/font/google
 import SmoothScroll from "@/components/SmoothScroll";
 import Cursor from "@/components/Cursor";
 import Transition from "@/components/Transition";
+import Preloader from "@/components/Preloader";
 import "@/styles/base.css";
 
 // Type follows the reference hero: Times New Roman for everything, Geist Mono for labels.
@@ -26,6 +27,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <SmoothScroll />
         <Cursor />
         <Transition />
+        <Preloader />
         {children}
       </body>
     </html>
