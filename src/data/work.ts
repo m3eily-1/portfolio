@@ -168,8 +168,8 @@ export const projects: Project[] = [
     overview:
       "Two projects at stc: a design system that brought consistency to the company's internal platforms, and Demand Committee, a secure voting app for committees and events.",
     cover: "/img/mockups/stc-design-system.webp",
-    thumb: "/img/mockups/stc-design-system-final.webp",
-    images: ["/img/mockups/stc-design-system-final.webp", "/img/mockups/stc-voting-final.webp", "/img/stc-ds-1.webp", "/img/stc-voting.webp"],
+    thumb: "/img/mockups/stc-voting-final.webp",
+    images: ["/img/mockups/stc-voting-final.webp", "/img/mockups/stc-design-system-final.webp", "/img/stc-ds-1.webp", "/img/stc-voting.webp"],
     sections: [
       STC_ROLE,
       {
@@ -207,6 +207,7 @@ export const projects: Project[] = [
     overview:
       "An integrated electronic network launched in 2018 that streamlined leasing property with a secure, convenient way to conclude leases online, using a standard contract certified by the Ministry of Justice.",
     cover: "/img/mockups/ejar.webp",
+    thumb: "/img/mockups/ejar-final.webp",
     images: ["/img/mockups/ejar.webp", "/img/ejar-1.webp", "/img/ejar-2.webp"],
     link: { label: "eservices.ejar.sa", href: "https://eservices.ejar.sa" },
     sections: [
