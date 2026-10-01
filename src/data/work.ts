@@ -127,8 +127,9 @@ export const projects: Project[] = [
     overviewTitle: "The platform",
     overview:
       "webook.com is an all-in-one social engagement platform for booking experiences and online tickets for the most interesting events and activities.",
-    cover: "/img/placeholder-phone.webp",
-    images: ["/img/placeholder-phone.webp"],
+    cover: "/img/mockups/webook-final.webp",
+    thumb: "/img/mockups/webook-final.webp",
+    images: ["/img/mockups/webook-final.webp"],
     sections: [
       {
         title: "My role",
