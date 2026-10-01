@@ -52,7 +52,7 @@
 .hw { padding: 16svh var(--pad) 12svh; }
 .hw-head { display: flex; justify-content: space-between; align-items: end; gap: 4vw; margin-bottom: 7svh; }
 .hw-lede { max-width: 36ch; color: var(--mute); font-size: 18px; line-height: 1.4; }
-.hw-step { position: relative; display: grid; grid-template-columns: minmax(0, 0.55fr) minmax(0, 2.25fr); gap: 3vw; padding: 7svh 0; } /* no step images for now */
+.hw-step { position: relative; display: grid; grid-template-columns: minmax(0, 0.55fr) minmax(0, 1fr) minmax(0, 1.25fr); gap: 3vw; padding: 7svh 0; min-height: 60svh; }
 .hw-rule { position: absolute; left: 0; right: 0; top: 0; height: 1px; background: var(--line); }
 .hw-n { font-family: var(--serif); font-size: clamp(5rem, 10vw, 11rem); line-height: 0.8; letter-spacing: -0.05em; color: rgba(237, 230, 218, 0.28); }
 .hw-copy { display: flex; flex-direction: column; justify-content: space-between; gap: 24px; }

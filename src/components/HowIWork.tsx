@@ -6,10 +6,10 @@ import { useGsap } from "@/components/career/useGsap";
 
 // Numbered steps (Double Diamond phases), laid out like the reference's "How we work".
 const STEPS = [
-  { title: "Discover the Right Problem", text: "Research before pixels: interviews, UX audits, competitors and data, with AI to help synthesise it, until the real problem is clear.", img: "/img/orange-3.webp" },
-  { title: "Define It Sharply", text: "Turn findings into problem statements, user flows and success metrics everyone agrees on.", img: "/img/ejar-2.webp" },
-  { title: "Develop and Explore", text: "Explore wide with wireframes, UI directions and AI-built working prototypes, then converge on the strongest one.", img: "/img/budget-2.webp" },
-  { title: "Deliver with Clarity", text: "Test with real users, refine, hand off every asset and support the build through launch.", img: "/img/otida-2.webp" },
+  { title: "Discover the Right Problem", text: "Research before pixels: interviews, UX audits, competitors and data, with AI to help synthesise it, until the real problem is clear.", img: "/img/process/discover.webp" },
+  { title: "Define It Sharply", text: "Turn findings into problem statements, user flows and success metrics everyone agrees on.", img: "/img/process/define.webp" },
+  { title: "Develop and Explore", text: "Explore wide with wireframes, UI directions and AI-built working prototypes, then converge on the strongest one.", img: "/img/process/develop.webp" },
+  { title: "Deliver with Clarity", text: "Test with real users, refine, hand off every asset and support the build through launch.", img: "/img/process/deliver.webp" },
 ];
 
 export default function HowIWork() {
@@ -20,7 +20,9 @@ export default function HowIWork() {
       gsap
         .timeline({ scrollTrigger: { trigger: s, start: "top 75%" } })
         .from(s.querySelector(".hw-rule"), { scaleX: 0, transformOrigin: "left", duration: 1.4, ease: "expo.inOut" })
-        .from(s.querySelectorAll(".hw-n, .hw-title, .hw-text"), { y: 40, autoAlpha: 0, stagger: 0.08, duration: 1.1 }, 0.2);
+        .from(s.querySelectorAll(".hw-n, .hw-title, .hw-text"), { y: 40, autoAlpha: 0, stagger: 0.08, duration: 1.1 }, 0.2)
+        .fromTo(s.querySelector(".hw-img"), { clipPath: "inset(0 0 100% 0)" }, { clipPath: "inset(0 0 0% 0)", duration: 1.4, ease: "expo.inOut" }, 0.15);
+      gsap.fromTo(s.querySelector(".hw-img img"), { yPercent: -6 }, { yPercent: 6, ease: "none", scrollTrigger: { trigger: s, start: "top bottom", end: "bottom top", scrub: true } });
     });
   });
   return (
@@ -40,7 +42,10 @@ export default function HowIWork() {
               <h3 className="hw-title">{s.title}</h3>
               <p className="hw-text">{s.text}</p>
             </div>
-            {/* Step images hidden until Ahmed supplies them (s.img keeps the old mockup path). */}
+            {/* Free Unsplash photos (licence: free use, no attribution needed), graded to the site palette. */}
+            <figure className="hw-img" aria-hidden>
+              <img src={s.img} alt="" loading="lazy" />
+            </figure>
           </li>
         ))}
       </ol>
