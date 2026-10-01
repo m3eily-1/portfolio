@@ -80,7 +80,7 @@
 .cl2 { padding: 6svh var(--pad) 16svh; }
 .cl2-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-rows: auto auto; column-gap: 4vw; row-gap: 18px; align-items: end; margin-bottom: 7svh; }
 .cl2-head .label { grid-column: 1 / -1; }
-.cl2-title { font-family: var(--serif); font-weight: 400; font-size: clamp(2.8rem, 5.4vw, 5.8rem); line-height: 0.95; letter-spacing: -0.04em; }
+.cl2-title { font-family: var(--serif); font-weight: 400; font-size: clamp(2rem, 3.2vw, 3.4rem); /* small title, same as How I work */ line-height: 0.95; letter-spacing: -0.04em; }
 .cl2-title em { color: var(--sun); }
 /* Logos ride an S-curve (PathMarquee). Tiles stay square; hovering one lifts it and brings back its colour. */
 .pm { position: relative; width: 100%; aspect-ratio: 996 / 330; touch-action: pan-y; user-select: none; -webkit-user-select: none; }
