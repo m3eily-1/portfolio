@@ -9,8 +9,8 @@ import { navigate } from "@/components/Transition";
 import Arrow from "@/components/Arrow";
 
 // Header is logo + Menu on every screen size; the links live in the overlay.
-const MENU = [
-  { id: "story", label: "Story" },
+const MENU: { id: string; label: string; route?: string }[] = [
+  { id: "story", label: "Story", route: "/story" },
   { id: "work", label: "Work" },
   // { id: "delight", label: "Delight" }, // section hidden for now
   { id: "services", label: "Services" },
@@ -67,14 +67,17 @@ export default function Header() {
     return () => window.removeEventListener("scroll", on);
   }, []);
 
-  const go = (id: string) => {
-    if (path !== "/") return navigate(router, `/#${id}`);
-    getLenis()?.scrollTo(`#${id}`, { duration: 1.8 });
+  const go = (id: string, route?: string) => {
+    // A page of its own (the story): travel there, or back to its top if already on it.
+    if (route) return path === route ? getLenis()?.scrollTo(0, { duration: 1.6 }) : navigate(router, route);
+    // A section on this page scrolls in place; otherwise go home and land on it.
+    if (document.getElementById(id)) return getLenis()?.scrollTo(`#${id}`, { duration: 1.8 });
+    navigate(router, `/#${id}`);
   };
-  const goFromMenu = (id: string) => {
+  const goFromMenu = (id: string, route?: string) => {
     setOpen(false);
     // Wait for the scroll lock to lift before travelling.
-    setTimeout(() => go(id), 450);
+    setTimeout(() => go(id, route), 450);
   };
 
   return (
@@ -103,7 +106,7 @@ export default function Header() {
     <div ref={menu} id="site-menu" className="mm" aria-hidden={!open}>
       <nav className="mm-nav">
         {MENU.map((l, i) => (
-          <button key={l.id} className="mm-link" onClick={() => goFromMenu(l.id)} tabIndex={open ? 0 : -1}>
+          <button key={l.id} className="mm-link" onClick={() => goFromMenu(l.id, l.route)} tabIndex={open ? 0 : -1}>
             <b>{String(i + 1).padStart(2, "0")}</b>
             {l.label}
           </button>

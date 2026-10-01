@@ -123,7 +123,7 @@ export default function Hero() {
           </span>
           Let&rsquo;s talk
         </a>
-        <button className="hero-scroll" onClick={() => getLenis()?.scrollTo("#story", { duration: 1.8 })} aria-label="Scroll to the story">
+        <button className="hero-scroll" onClick={() => getLenis()?.scrollTo("#clients", { duration: 1.8 })} aria-label="Scroll to the next section">
           <span>Scroll</span>
           <i aria-hidden />
         </button>

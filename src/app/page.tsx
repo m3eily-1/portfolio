@@ -1,10 +1,5 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import StoryIntro from "@/components/StoryIntro";
-import ChapterPixels from "@/components/ChapterPixels";
-import ChapterLogic from "@/components/ChapterLogic";
-import ChapterProducts from "@/components/ChapterProducts";
-import CareerCounter from "@/components/career/CareerCounter";
 import FeaturedWorks from "@/components/FeaturedWorks";
 import Services from "@/components/Services";
 import Clients from "@/components/Clients";
@@ -15,25 +10,18 @@ import Delight from "@/components/Delight";
 const SHOW_DELIGHT = false;
 import HowIWork from "@/components/HowIWork";
 import Voices from "@/components/Voices";
-import Beyond from "@/components/Beyond";
 import Contact from "@/components/Contact";
 import PageReady from "@/components/PageReady";
 import "@/styles/home.css";
-import "@/styles/chapters.css";
-import "@/styles/career.css";
 import "@/styles/sections2.css";
 
+// The story (title slide, chapters 01–04, off-screen) lives on /story.
 export default function Home() {
   return (
     <>
       <Header />
       <main>
         <Hero />
-        <StoryIntro />
-        <ChapterPixels />
-        <ChapterLogic />
-        <ChapterProducts />
-        <CareerCounter />
         <Clients />
         <FeaturedWorks limit={4} />
         <AiSection />
@@ -41,7 +29,6 @@ export default function Home() {
         <Services />
         <HowIWork />
         <Voices />
-        <Beyond />
         <Contact />
       </main>
       <PageReady />
