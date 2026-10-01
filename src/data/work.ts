@@ -36,7 +36,7 @@ const STC_ROLE: Section = {
   ],
 };
 
-export const projects: Project[] = [
+const allProjects: Project[] = [
   // Not from the PDF: webook's white-label build for SC Braga (screens from Test/scbraga-app-landing).
   {
     slug: "sc-braga",
@@ -387,6 +387,9 @@ export const projects: Project[] = [
     sections: [],
   },
 ];
+
+// Only projects with a final mockup from Ahmed are shown; the rest come back as soon as their `thumb` is set.
+export const projects: Project[] = allProjects.filter((p) => p.thumb);
 
 export const getProject = (slug: string) => projects.find((p) => p.slug === slug);
 export const nextProject = (slug: string) => {
