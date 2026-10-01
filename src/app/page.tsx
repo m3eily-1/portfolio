@@ -34,10 +34,10 @@ export default function Home() {
         <ChapterLogic />
         <ChapterProducts />
         <CareerCounter />
+        <Clients />
         <FeaturedWorks limit={4} />
         <AiSection />
         {SHOW_DELIGHT && <Delight />}
-        <Clients />
         <Services />
         <HowIWork />
         <Voices />
