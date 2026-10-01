@@ -4,5 +4,5 @@
 4:I[97367,["/portfolio/_next/static/chunks/178fiixt91asf.js","/portfolio/_next/static/chunks/17rf3kwr3ft34.js","/portfolio/_next/static/chunks/158myu8e_yme3.js"],"OutletBoundary"]
 5:"$Sreact.suspense"
 :HL["/portfolio/_next/static/chunks/09pt2e9--3bl0.css","style"]
-0:{"rsc":["$","$1","c",{"children":[[["$","$L2",null,{}],["$","$L3",null,{"slug":"flash"}]],[["$","link","0",{"rel":"stylesheet","href":"/portfolio/_next/static/chunks/09pt2e9--3bl0.css","precedence":"next"}],["$","script","script-0",{"src":"/portfolio/_next/static/chunks/1gsb64ukqdrzd.js","async":true}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"gSWFk4vGmwMc7Gj-elG9m"}
+0:{"rsc":["$","$1","c",{"children":[[["$","$L2",null,{}],["$","$L3",null,{"slug":"flash"}]],[["$","link","0",{"rel":"stylesheet","href":"/portfolio/_next/static/chunks/09pt2e9--3bl0.css","precedence":"next"}],["$","script","script-0",{"src":"/portfolio/_next/static/chunks/1gsb64ukqdrzd.js","async":true}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"No2VHKkB3i8LWJ6wlZ_Tr"}
 6:null
