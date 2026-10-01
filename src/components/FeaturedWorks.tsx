@@ -11,7 +11,7 @@ import { withBase } from "@/lib/scroll";
 
 // Two staggered columns of case-study cards, like the reference's "Featured Works".
 // Placeholder: solid grey thumbnails until Ahmed's final images arrive. Set to false to show the mockups again.
-const PLACEHOLDER = true;
+const PLACEHOLDER = false;
 type Props = {
   /** Show only the first N projects plus an "All works" button (home page). */
   limit?: number;
@@ -75,7 +75,7 @@ export default function FeaturedWorks({ limit, all = false }: Props) {
                 }}
               >
                 <div className={`fw-img${PLACEHOLDER ? " is-ph" : ""}`}>
-                  {!PLACEHOLDER && <img src={p.cover} alt={`${p.name} mockups`} loading="lazy" />}
+                  {!PLACEHOLDER && <img src={(i + ci) % 2 ? p.cover.replace(/\.webp$/, "-tall.webp") : p.cover} alt={`${p.name} mockup`} loading="lazy" />}
                 </div>
                 <div className="fw-meta">
                   <div>

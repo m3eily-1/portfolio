@@ -1,5 +1,6 @@
 // Case studies from the PDF (pages 9–26). Copy is tightened; facts are unchanged.
 
+// Covers are the consistent mockups from scripts/make-mockups.py; images[1..] are the original PDF mockups (case-study gallery).
 export type Section = { title: string; items: { head?: string; text: string }[] };
 
 export type Project = {
@@ -28,8 +29,8 @@ export const projects: Project[] = [
     summary: "The club's official app and website, on webook's white-label platform.",
     overview:
       "Sporting Clube de Braga's official mobile app and website, built on webook's white-label platform. Fans carry their tickets, follow matches live, read club news and book stadium tours, in Portuguese, English, Spanish, French and Arabic. The app launched on iOS and Android in July 2026.",
-    cover: "/img/scbraga/cover.webp",
-    images: ["/img/scbraga/tickets.webp", "/img/scbraga/live.webp", "/img/scbraga/news.webp", "/img/scbraga/visit.webp"],
+    cover: "/img/mockups/sc-braga.webp",
+    images: ["/img/mockups/sc-braga.webp", "/img/scbraga/tickets.webp", "/img/scbraga/live.webp", "/img/scbraga/news.webp", "/img/scbraga/visit.webp"],
     sections: [
       {
         title: "Inside the app",
@@ -58,8 +59,8 @@ export const projects: Project[] = [
     summary: "One system for every stc internal platform.",
     overview:
       "The journey began with a detailed exploration of stc's current solutions. Evaluating function after function surfaced one common issue: a lack of design consistency that was fragmenting the user experience.",
-    cover: "/img/stc-ds-1.webp",
-    images: ["/img/stc-ds-1.webp"],
+    cover: "/img/mockups/stc-design-system.webp",
+    images: ["/img/mockups/stc-design-system.webp", "/img/stc-ds-1.webp"],
     sections: [
       {
         title: "Design process",
@@ -85,8 +86,8 @@ export const projects: Project[] = [
     summary: "Secure, compliant voting for committees and events.",
     overview:
       "A voting app that protects the security and integrity of voting in events such as GSS and project reviews. It offers a secure, compliant experience and integrates with Hub Inbox, SMS and Outlook Calendar.",
-    cover: "/img/stc-voting.webp",
-    images: ["/img/stc-voting.webp"],
+    cover: "/img/mockups/stc-voting.webp",
+    images: ["/img/mockups/stc-voting.webp", "/img/stc-voting.webp"],
     sections: [
       {
         title: "What it does",
@@ -105,8 +106,8 @@ export const projects: Project[] = [
     summary: "Leasing property in Saudi Arabia, fully online.",
     overview:
       "An integrated electronic network launched in 2018 that streamlined leasing property with a secure, convenient way to conclude leases online, using a standard contract certified by the Ministry of Justice.",
-    cover: "/img/ejar-1.webp",
-    images: ["/img/ejar-1.webp", "/img/ejar-2.webp"],
+    cover: "/img/mockups/ejar.webp",
+    images: ["/img/mockups/ejar.webp", "/img/ejar-1.webp", "/img/ejar-2.webp"],
     link: { label: "eservices.ejar.sa", href: "https://eservices.ejar.sa" },
     sections: [
       {
@@ -130,8 +131,8 @@ export const projects: Project[] = [
     summary: "Subscriptions, bills and recharges, finally easy.",
     overview:
       "A mobile app that empowers Orange users with streamlined management of subscriptions, bill payments, recharges and more. The goal: raise engagement and satisfaction, and build a design system to keep the app consistent.",
-    cover: "/img/orange-1.webp",
-    images: ["/img/orange-1.webp", "/img/orange-2.webp", "/img/orange-3.webp"],
+    cover: "/img/mockups/my-orange.webp",
+    images: ["/img/mockups/my-orange.webp", "/img/orange-1.webp", "/img/orange-2.webp", "/img/orange-3.webp"],
     sections: [
       {
         title: "What we found",
@@ -161,8 +162,8 @@ export const projects: Project[] = [
     summary: "Book a car anywhere in KSA, extras included.",
     overview:
       "A car-rental app for booking at any Budget location in KSA, with handy extras like GPS, mobile Wi-Fi and child seats added right in the booking.",
-    cover: "/img/budget-1.webp",
-    images: ["/img/budget-1.webp", "/img/budget-2.webp"],
+    cover: "/img/mockups/budget.webp",
+    images: ["/img/mockups/budget.webp", "/img/budget-1.webp", "/img/budget-2.webp"],
     sections: [
       {
         title: "How it was built",
@@ -185,8 +186,8 @@ export const projects: Project[] = [
     summary: "Instant payments without the mundane steps.",
     overview:
       "Flash is an instant payment app approved by the Central Bank of Egypt, with every payment processed securely by Banque Misr. The goal was a user-centric app that makes paying easier and saves the time lost to confusing steps.",
-    cover: "/img/flash-1.webp",
-    images: ["/img/flash-1.webp"],
+    cover: "/img/mockups/flash.webp",
+    images: ["/img/mockups/flash.webp", "/img/flash-1.webp"],
     sections: [
       {
         title: "Focus",
@@ -205,8 +206,8 @@ export const projects: Project[] = [
     summary: "Africa's first zero-commission robo-advisor.",
     overview:
       "BONA is the first zero-commission neo-brokerage and robo-advisor in Africa: a one-stop investment shop for digital millennials and Gen Z, with 3,000+ US securities from a $1 minimum, local payment gateways and local ID.",
-    cover: "/img/bona-1.webp",
-    images: ["/img/bona-1.webp", "/img/bona-2.webp"],
+    cover: "/img/mockups/bona.webp",
+    images: ["/img/mockups/bona.webp", "/img/bona-1.webp", "/img/bona-2.webp"],
     sections: [
       {
         title: "Features",
@@ -228,8 +229,8 @@ export const projects: Project[] = [
     summary: "A complete care model for people with diabetes.",
     overview:
       "Otida is a complete solution for managing diabetes: a health-tech app with an innovative, efficient care model. Its multidisciplinary approach focuses on reversing and preventing complications.",
-    cover: "/img/otida-1.webp",
-    images: ["/img/otida-1.webp", "/img/otida-2.webp"],
+    cover: "/img/mockups/otida.webp",
+    images: ["/img/mockups/otida.webp", "/img/otida-1.webp", "/img/otida-2.webp"],
     sections: [
       {
         title: "How it was built",
@@ -251,8 +252,8 @@ export const projects: Project[] = [
     summary: "Audits and inspections with the full picture.",
     overview:
       "An all-in-one platform for auditing, inspections and operational-readiness management. Real-time visibility uncovers process gaps, speeds up inspections and generates insightful reports instantly.",
-    cover: "/img/check-1.webp",
-    images: ["/img/check-1.webp"],
+    cover: "/img/mockups/check.webp",
+    images: ["/img/mockups/check.webp", "/img/check-1.webp"],
     sections: [],
   },
   {
@@ -263,8 +264,8 @@ export const projects: Project[] = [
     summary: "Trusted cleaners, without the waiting.",
     overview:
       "Jinni provides residential and commercial cleaning with trusted, experienced, fully equipped professionals, so nobody has to spend the day waiting for the cleaners to show up.",
-    cover: "/img/jinni-1.webp",
-    images: ["/img/jinni-1.webp"],
+    cover: "/img/mockups/jinni.webp",
+    images: ["/img/mockups/jinni.webp", "/img/jinni-1.webp"],
     sections: [],
   },
   {
@@ -275,8 +276,8 @@ export const projects: Project[] = [
     summary: "Egypt's leading independent English media.",
     overview:
       "Egyptian Streets (ES Media Network FZ LLC) is Egypt's leading independent English-language media organisation, organically reaching more than two million people a month.",
-    cover: "/img/es-1.webp",
-    images: ["/img/es-1.webp"],
+    cover: "/img/mockups/egyptian-streets.webp",
+    images: ["/img/mockups/egyptian-streets.webp", "/img/es-1.webp"],
     sections: [],
   },
 ];

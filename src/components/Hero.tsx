@@ -12,10 +12,10 @@ import { getLenis } from "@/lib/scroll";
 import { whenPreloaded } from "@/lib/preload";
 import Arrow from "@/components/Arrow";
 
-// Every mockup in the PDF, each linked to its case study.
-const CARDS: RingCard[] = projects.flatMap((p) => p.images.map((src) => ({ src, slug: p.slug, label: `${p.name} — ${p.category}` })));
-// Placeholder: plain grey cards until the final thumbnails are ready. Set to undefined to show the mockups again.
-const RING_FILL: string | undefined = "#3a3733";
+// One mockup per project, each linked to its case study.
+const CARDS: RingCard[] = projects.map((p) => ({ src: p.cover, slug: p.slug, label: `${p.name} — ${p.category}` }));
+// Set to a colour to show plain placeholder cards instead of the mockups.
+const RING_FILL: string | undefined = undefined;
 
 export default function Hero() {
   const root = useRef<HTMLElement>(null);
