@@ -167,6 +167,7 @@ export const projects: Project[] = [
     overview:
       "The journey began with a detailed exploration of stc's current solutions. Evaluating function after function surfaced one common issue: a lack of design consistency that was fragmenting the user experience.",
     cover: "/img/mockups/stc-design-system.webp",
+    thumb: "/img/mockups/stc-design-system-final.webp",
     images: ["/img/mockups/stc-design-system.webp", "/img/stc-ds-1.webp"],
     sections: [
       STC_ROLE,
