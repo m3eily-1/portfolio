@@ -290,6 +290,7 @@ export const projects: Project[] = [
     overview:
       "Flash is an instant payment app approved by the Central Bank of Egypt, with every payment processed securely by Banque Misr. The goal was a user-centric app that makes paying easier and saves the time lost to confusing steps.",
     cover: "/img/mockups/flash.webp",
+    thumb: "/img/mockups/flash-final.webp",
     images: ["/img/mockups/flash.webp", "/img/flash-1.webp"],
     sections: [
       {
