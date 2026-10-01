@@ -104,12 +104,8 @@ em { font-style: italic; }
 .cursor[data-label]:not([data-label=""])::after { content: attr(data-label); font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); }
 html:not(.has-cursor) .cursor { display: none; }
 
-/* Route curtain */
-.curtain {
-  position: fixed; inset: 0; z-index: 200; background: var(--sun); color: var(--ink); transform: translateY(100%); /* replaced by GSAP on mount */
-  display: flex; align-items: flex-end; padding: 4vw; pointer-events: none;
-}
-.curtain span { font-family: var(--serif); font-weight: 400; font-size: clamp(3rem, 9vw, 10rem); line-height: 0.9; }
+/* Route transition: a quick fade through ink. */
+.tr-fade { position: fixed; inset: 0; z-index: 200; pointer-events: none; background: var(--ink); visibility: hidden; }
 
 
 @media (max-width: 900px) {
