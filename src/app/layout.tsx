@@ -11,10 +11,18 @@ const mono = Geist_Mono({ subsets: ["latin"], weight: ["400", "500"], variable: 
 const pixel = Pixelify_Sans({ subsets: ["latin"], variable: "--f-pixel", display: "swap" });
 const script = Mrs_Saint_Delafield({ subsets: ["latin"], weight: "400", variable: "--f-script", display: "swap" });
 
+const SITE = "https://m3eily-1.github.io/portfolio/";
+const TITLE = "Ahmed Mealy — From pixels to products";
+const DESCRIPTION =
+  "Senior product designer and builder at webook, Riyadh, designing delightful, AI-powered products. The story of a designer who went from graphic design to code to product design, and 40+ products along the way.";
+// Share image (LinkedIn, X, WhatsApp…): built by scripts/make-og.py. Absolute URL so the /portfolio base path is kept.
+const OG = { url: `${SITE}og.png`, width: 1200, height: 630, alt: "Ahmed Mealy, Senior Product Designer & Builder" };
+
 export const metadata: Metadata = {
-  title: "Ahmed Mealy — From pixels to products",
-  description:
-    "Senior product designer and builder at webook, Riyadh, designing delightful, AI-powered products. The story of a designer who went from graphic design to code to product design, and 40+ products along the way.",
+  title: TITLE,
+  description: DESCRIPTION,
+  openGraph: { type: "website", url: SITE, siteName: "Ahmed Mealy", title: TITLE, description: DESCRIPTION, images: [OG] },
+  twitter: { card: "summary_large_image", title: TITLE, description: DESCRIPTION, images: [OG.url] },
 };
 
 export const viewport: Viewport = { width: "device-width", initialScale: 1, viewportFit: "cover", themeColor: "#000000" };
