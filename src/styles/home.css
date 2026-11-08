@@ -128,7 +128,7 @@
   .hero-cta { display: inline-flex; }
   .hero-scroll { margin-top: 20px; gap: 8px; }
   .hero-scroll i { height: 32px; }
-  .hero-title { font-size: 9.6vw; padding-inline: 6vw; } /* one line (~7.7em wide) with side breathing room: ~74vw of text in a 90vw column */
+  .hero-title { font-size: 6.2vw; padding-inline: 4vw; } /* one line: "Senior Product Designer & Builder" is ~13.1em wide, ~81vw of text in a 90vw column */
   .st-title { font-size: 15vw; }
   .vo-card { width: 80vw; min-height: 50svh; }
   .by-item, .by-item.is-flip { grid-template-columns: 1fr; }

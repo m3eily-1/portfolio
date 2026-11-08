@@ -5,7 +5,7 @@ export const person = {
   name: "Ahmed Mealy",
   first: "Ahmed",
   last: "Mealy",
-  role: "Product Design Lead",
+  role: "Senior Product Designer & Builder",
   company: "webook",
   city: "Riyadh",
   email: "ahmed.k.mealy@gmail.com",
@@ -98,7 +98,7 @@ export const releases: Release[] = [
     years: "2024 — Now",
     company: "webook",
     logo: "/img/logos/webook.webp",
-    role: "Product Design Lead",
+    role: "Senior Product Designer",
     place: "Riyadh · On-site",
     notes: [
       { tag: "Shipped", text: "Social login, subscriptions, cashless payments, vouchers and gift cards." },

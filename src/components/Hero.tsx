@@ -121,7 +121,7 @@ export default function Hero() {
       <div className="hero-copy">
         <p className="hero-hi">Hi, I&rsquo;m {person.name}</p>
         <h1 className="hero-title">
-          Product Design Lead
+          Senior Product Designer &amp; Builder
         </h1>
         <p className="hero-sub">Designing delightful products people love to use, down to the smallest detail.</p>
         <a className="btn btn--light hero-cta" href={`mailto:${person.email}`}>

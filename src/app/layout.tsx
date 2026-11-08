@@ -14,7 +14,7 @@ const script = Mrs_Saint_Delafield({ subsets: ["latin"], weight: "400", variable
 export const metadata: Metadata = {
   title: "Ahmed Mealy — From pixels to products",
   description:
-    "Product Design Lead at webook, Riyadh, designing delightful, AI-powered products. The story of a designer who went from graphic design to code to product design, and 40+ products along the way.",
+    "Senior product designer and builder at webook, Riyadh, designing delightful, AI-powered products. The story of a designer who went from graphic design to code to product design, and 40+ products along the way.",
 };
 
 export const viewport: Viewport = { width: "device-width", initialScale: 1, viewportFit: "cover", themeColor: "#000000" };

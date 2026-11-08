@@ -116,7 +116,7 @@ const allProjects: Project[] = [
     ],
     link: { label: "scbraga.pt", href: "https://scbraga.pt" },
   },
-  // Not from the PDF: Ahmed's feature work at webook (Product Design Lead, 2024 – now).
+  // Not from the PDF: Ahmed's feature work at webook (Senior Product Designer, 2024 – now).
   {
     slug: "webook",
     name: "webook",
